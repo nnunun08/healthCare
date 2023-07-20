@@ -1,0 +1,78 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+:root {
+    --primary : #FF7272;
+    --lightGrey1 : #F6F7F8;
+    --lightGrey2 : #E9EBED;
+}
+
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+    background: #F6F7F8;
+}
+
+.serviceWrap {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+}
+header.topNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 22px 15px 26px;
+    height: 67px;
+    background-color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.banner {
+    .bannerItem {
+        box-sizing: border-box;
+        width: 100%;
+        height: 263px;
+        background: center/cover no-repeat;
+        padding: 25px 29px;
+        position: relative;
+        color: #fff;
+    }
+    .mainTit {
+        font-size: 23px;
+        color: #fff;
+        text-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        font-weight: 700;
+    }
+    .subTit {
+        font-size: 15px;
+        text-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        font-weight: 500;
+    }
+    .bannerBtn {
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 29px;
+        background-color: var(--primary);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 40px;
+        text-decoration: none;
+        position: absolute;
+        bottom: 25px;
+        left: 26px;
+        &::after {
+            content: '';
+            width: 16px;
+            height:16px;
+            background: url(../img/arr_16_w.svg) center/cover no-repeat;
+        }
+    }
+}
