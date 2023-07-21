@@ -14,11 +14,26 @@ body {
 }
 
 .serviceWrap {
+    width: 100vw;
     max-width: 600px;
     margin: 0 auto;
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
 }
+
+.conWrap {
+    background-color: #fff;
+    margin: 8px 0;
+    padding: 26px 16px;
+}
+
+h1 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
 header.topNav {
     display: flex;
     justify-content: space-between;
@@ -30,6 +45,7 @@ header.topNav {
     top: 0;
     width: 100%;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .banner {
@@ -74,5 +90,41 @@ header.topNav {
             height:16px;
             background: url(../img/arr_16_w.svg) center/cover no-repeat;
         }
+    }
+}
+
+
+.frame_imgText {
+    position: relative;
+    padding: 16px 20px;
+    background-color: var(--lightGrey1);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border: 0;
+    width: 100%;
+    gap: 20px;
+    border-radius: 8px;
+    overflow:hidden;
+    & + & {
+        margin-top: 10px;
+    }
+    .badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 12px;
+        font-weight: 600;
+        color: #fff;
+        background-color: var(--primary);
+        border-radius: 0 8px 0 8px;
+        padding: 3px 11.5px;
+    }
+    .tit {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .desc {
+        font-size: 13px;
     }
 }
