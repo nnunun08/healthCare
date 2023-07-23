@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌레터생활건강</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap">
+
+        <!-- component : topNav -->
+        <div data-include-path="./component/frame_topNav.html"></div>
+
+        <!-- component : frame_imgText -->
+        <div data-include-path="./component/frame_imgText.html"></div>
+    
+        <!-- component : frame_useGuide -->
+        <div data-include-path="./component/frame_useGuide.html"></div>
+
+        <!-- component : frame_proposeBanner -->
+        <div data-include-path="./component/frame_proposeBanner.html"></div>
+        
+        <!-- component : frame_mainBtn -->
+        <div data-include-path="./component/frame_mainBtn.html"></div>
+
+        <!-- component : frame_footer -->
+        <div data-include-path="./component/frame_footer.html"></div>
+
+        <!-- component : frame_bottomNav -->
+        <div data-include-path="./component/frame_bottomNav.html"></div>
+
+        <!-- component : frame_alert -->
+        <!-- <div data-include-path="./component/frame_alert.html"></div> -->
+        <div class="frame_alert">
+            <!-- 모달 활성화시 ev-modal 에 .ac 추가 -->
+            <div class="ev-modal ac" style="position:relative; width:390px; height:844px; margin: 20px auto;">
+                <div class="dim"></div>
+                <div class="card">
+                    <div>
+                        <div class="tit">
+                            이제 PASS 헬스케어<br>
+                            회원이 되었습니다.
+                        </div>
+                        <!-- <div class="desc">
+                            빌레터생활건강의 건강정보는 국가에서 지정한 건강검진 평가 기준을 바탕으로 제공되고 있습니다.<br>
+                            하지만 이것은 전문의료정보가 아니기 때문에 질환에 대해 자세한 상담을 원하시면 반드시 각 분야의 전문의를 찾으시기 바랍니다.
+                        </div> -->
+                    </div>
+                    <div class="btnWrap">
+                        <!-- <button class="btn btn-false">취소</button> -->
+                        <button class="btn btn-true">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- component : frame_confirm -->
+        <!-- <div data-include-path="./component/frame_confirm.html"></div> -->
+        <div class="frame_confirm">
+            <!-- 모달 활성화시 ev-modal 에 .ac 추가 -->
+            <div class="ev-modal ac" style="position:relative; width:390px; height:844px; margin: 20px auto;">
+                <div class="dim"></div>
+                <div class="card">
+                    <div>
+                        <div class="tit">
+                            이제 PASS 헬스케어<br>
+                            서비스를 종료하시겠습니까?
+                        </div>
+                        <!-- <div class="desc">
+                            빌레터생활건강의 건강정보는 국가에서 지정한 건강검진 평가 기준을 바탕으로 제공되고 있습니다.<br>
+                            하지만 이것은 전문의료정보가 아니기 때문에 질환에 대해 자세한 상담을 원하시면 반드시 각 분야의 전문의를 찾으시기 바랍니다.
+                        </div> -->
+                    </div>
+                    <div class="btnWrap">
+                        <button class="btn btn-false">취소</button>
+                        <button class="btn btn-true">종료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- component : frame_bottomBtn -->
+        <div class="frame_bottomBtn" style="position: static;">
+            <!-- <button class="btn">닫기</button> -->
+            <a href="#" class="btn-mainArr">
+                닫기
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
