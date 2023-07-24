@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <div class="serviceWrap">
+    <div class="serviceWrap whiteBg">
         <div class="frame_topNavSub">
             <button class="close"></button>
             <div class="tit">헬스케어</div>
@@ -25,7 +25,7 @@
                 사용을 위한 약관동의가 필요합니다.
             </h1>
             <label class="frame_inputCheck">
-                <input type="checkbox">
+                <input type="checkbox" name="checklist" onclick='selectAll(this)'>
                 <div class="inputStyle">
                     <span class="checkboxImg"></span>
                     <span class="label">전체동의</span>
@@ -36,7 +36,7 @@
             <ul class="checkList">
                 <li>
                     <label class="frame_inputCheck">
-                        <input type="checkbox" required>
+                        <input type="checkbox" required name="checklist">
                         <div class="inputStyle">
                             <span class="checkboxImg"></span>
                             <span class="label">PASS 헬스케어 서비스 이용약관(필수)</span>
@@ -47,7 +47,7 @@
                 </li>
                 <li>
                     <label class="frame_inputCheck">
-                        <input type="checkbox" required>
+                        <input type="checkbox" required name="checklist">
                         <div class="inputStyle">
                             <span class="checkboxImg"></span>
                             <span class="label">PASS 헬스케어 개인정보 수집 및 이용동의(필수)</span>
@@ -62,7 +62,24 @@
                     <a href="#" class="arr"></a>
                 </li>
             </ul>
+            <script>
+                // 체크 박스 ALL 선택
+                function selectAll(selectAll)  {
+                    const checkboxes 
+                        = document.getElementsByName('checklist');
+                    
+                    checkboxes.forEach((checkbox) => {
+                        checkbox.checked = selectAll.checked;
+                    })
+                }
+            </script>
             
+            <!-- component : frame_bottomBtn -->
+            <div class="frame_bottomBtn">
+                <a href="#" class="btn-mainArr">
+                    무료 서비스 약관동의
+                </a>
+            </div>
         </div>
     </div>
 
