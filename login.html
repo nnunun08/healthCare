@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌레터생활건강</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap">
+        <div class="frame_topNavSub">
+            <button class="close"></button>
+            <div class="tit">헬스케어</div>
+        </div>
+
+        <div class="loginWrap">
+            <h1>
+                pass헬스케어 무료 서비스 <br>
+                사용을 위한 약관동의가 필요합니다.
+            </h1>
+            <label class="frame_inputCheck">
+                <input type="checkbox">
+                <div class="inputStyle">
+                    <span class="checkboxImg"></span>
+                    <span class="label">전체동의</span>
+                    <span class="req"></span>
+                </div>
+            </label>
+
+            <ul class="checkList">
+                <li>
+                    <label class="frame_inputCheck">
+                        <input type="checkbox" required>
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <span class="label">PASS 헬스케어 서비스 이용약관(필수)</span>
+                            <span class="req"></span>
+                        </div>
+                    </label>
+                    <a href="#" class="arr"></a>
+                </li>
+                <li>
+                    <label class="frame_inputCheck">
+                        <input type="checkbox" required>
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <span class="label">PASS 헬스케어 개인정보 수집 및 이용동의(필수)</span>
+                            <span class="req"></span>
+                        </div>
+                    </label>
+                    <a href="#" class="arr"></a>
+                </li>
+                <li>
+                    <!-- component : frame_inputCheck -->
+                    <div data-include-path="./component/frame_inputCheck.html"></div>
+                    <a href="#" class="arr"></a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+
+</body>
+</html>
