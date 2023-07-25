@@ -169,6 +169,7 @@ a {
   color: #fff;
   text-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
   font-weight: 700;
+  margin-bottom: 20px;
 }
 .banner .subTit {
   font-size: 15px;
@@ -241,6 +242,26 @@ a {
 }
 .banner .slick-dots li button::before {
   display: none;
+}
+.banner.bannerType2 .bannerItem {
+  aspect-ratio: 1/1;
+  height: auto;
+  max-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 36px;
+}
+.banner.bannerType2 .bannerBtn {
+  position: static;
+}
+.banner.bannerType2 .slick-dots li::after {
+  content: "/ 1";
+}
+.banner.bannerType2 .slick-dots {
+  right: 16px;
+  bottom: 45px;
 }
 
 .frame_imgText {
@@ -468,6 +489,9 @@ a {
   font-size: 13px;
   font-weight: 500;
   color: #B5B5B5;
+}
+.frame_bottomNav .menu.active .btn {
+  color: #000;
 }
 .frame_bottomNav li .icon {
   width: 28px;
@@ -808,43 +832,43 @@ a {
   background-color: var(--primary);
 }
 
-.kcalThumb {
+.frame_kcalThumb {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.kcalThumb strong {
+.frame_kcalThumb strong {
   font-size: 31px;
   font-weight: 700;
 }
-.kcalThumb em {
+.frame_kcalThumb em {
   font-size: 16px;
   color: #828282;
   margin-left: 4px;
 }
-.kcalThumb li {
+.frame_kcalThumb li {
   display: none;
   align-items: flex-end;
   gap: 4px;
 }
-.kcalThumb li.ac {
+.frame_kcalThumb li.ac {
   display: flex;
 }
-.kcalThumb li .message {
+.frame_kcalThumb li .message {
   font-size: 21px;
   font-weight: 700;
 }
-.kcalThumb li .message.good {
+.frame_kcalThumb li .message.good {
   color: var(--green);
 }
-.kcalThumb li .message.normal {
+.frame_kcalThumb li .message.normal {
   color: var(--yellow);
 }
-.kcalThumb li .message.bad {
+.frame_kcalThumb li .message.bad {
   color: var(--red);
 }
-.kcalThumb li img {
+.frame_kcalThumb li img {
   width: 68px;
   height: 68px;
 }
@@ -1065,4 +1089,242 @@ a {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   display: -webkit-box;
+}
+
+.newsList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 6px;
+}
+
+.frame_newsItem {
+  flex: 1 0 33.3%;
+  max-width: 33.3%;
+  width: 33.3%;
+  padding: 0 7px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  list-style: none;
+}
+.frame_newsItem .imgWrap {
+  width: 107px;
+  height: 107px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 18px;
+  flex: 0 0 auto;
+}
+.frame_newsItem .imgWrap::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.03;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.frame_newsItem .imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.frame_newsItem .imgWrap {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+}
+.frame_newsItem .imgWrap img {
+  transition: 0.3s ease-in-out;
+}
+.frame_newsItem .imgWrap::before {
+  display: none;
+}
+.frame_newsItem .text {
+  font-size: 13px;
+  margin: 8px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.frame_newsItem .date {
+  font-size: 13px;
+  color: #717171;
+}
+.frame_newsItem:hover .imgWrap img {
+  transform: scale(1.03);
+}
+.frame_newsItem:hover .text {
+  text-decoration: underline;
+}
+
+.frame_paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
+}
+.frame_paging .arr-r,
+.frame_paging .arr-l {
+  width: 36px;
+  height: 36px;
+  background: transparent url(../img/arr_paging.svg) center/cover no-repeat;
+  border: 0;
+  cursor: pointer;
+  margin: 0 20px;
+}
+.frame_paging .arr-r {
+  transform: rotate(180deg);
+}
+.frame_paging .allPage {
+  font-size: 12px;
+  color: #717171;
+}
+.frame_paging .currentPage {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 7px;
+}
+
+.newsContents img {
+  width: 100%;
+  display: block;
+}
+
+.anotherNews .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 16px;
+  padding-top: 33px;
+  box-sizing: border-box;
+}
+.anotherNews .top .goToList {
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 63px;
+  height: 34px;
+  margin-bottom: 13px;
+}
+.anotherNews .top .goToList::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: url(../img/ic_list.svg) no-repeat;
+}
+.anotherNews .listWrap {
+  margin: 22px 0;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.anotherNews .listWrap .item .anchorWrap {
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 18px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #717171;
+}
+.anotherNews .listWrap .item .anchorWrap .tit {
+  flex: 1 0 auto;
+}
+.anotherNews .listWrap .item .anchorWrap .date {
+  flex: 0 0 auto;
+}
+.anotherNews .frame_bottomBtn {
+  background-color: transparent;
+}
+.anotherNews .frame_bottomBtn .btn-mainArr::after {
+  display: none;
+}
+
+.frame_tipBanner a {
+  background: center/cover no-repeat;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 17px 26px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 120px;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 8px;
+}
+.frame_tipBanner .subTit {
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+.frame_tipBanner .tit {
+  font-size: 18px;
+}
+.frame_tipBanner .badge {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: rgba(12, 12, 12, 0.5);
+}
+
+.frame_rowAnchor {
+  margin-top: 10px;
+}
+.frame_rowAnchor a {
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 11px 16px;
+}
+.frame_rowAnchor a img {
+  width: 38px;
+  aspect-ratio: 1/1;
+  display: block;
+}
+.frame_rowAnchor a strong {
+  font-weight: 700;
+}
+.frame_rowAnchor a::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../img/arr_24_g.svg) center/cover no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.twoCard .guide {
+  line-height: 1.7;
+  margin-bottom: 13px;
+}
+.twoCard .flex {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.twoCard .flex .frame_quickCard {
+  flex: 1 0 auto;
 }/*# sourceMappingURL=main.css.map */
