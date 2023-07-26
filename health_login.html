@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌레터생활건강</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap">
+
+        <!-- component : topNav -->
+        <header class="frame_topNav">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.svg" alt="logo">
+                </a>
+            </div>    
+            <div class="profile" style="display: none;">
+                <a href="#">
+                    <img src="./img/profile.svg" alt="profile">
+                </a>
+            </div>
+            <div class="name">
+                <span class="userName">홍길동</span>&nbsp;님
+            </div>
+            
+        </header>
+
+        <div class="conWrap">
+            <div class="healthSummary">
+                <h1>
+                    <span class="userName">홍길동</span>님의 건강은<br>
+                    <span class="status">혈당 집중 관리</span>가 필요합니다.
+                    <button class="info"></button>
+                </h1>
+
+                <div class="flex">
+                    <div class="key">
+                        <img src="./img/ic_glucose_24.svg" alt="glucose">
+                        혈당
+                    </div>
+                    <div class="value">
+                        <div class="red">집중 관리 필요</div>
+                        <!-- <div class="yellow">관리 필요</div> -->
+                        <!-- <div class="green">정상</div> -->
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="key">
+                        <img src="./img/ic_blood_24.svg" alt="blood">
+                        혈압
+                    </div>
+                    <div class="value">
+                        <!-- <div class="red">집중 관리 필요</div> -->
+                        <div class="yellow">관리 필요</div>
+                        <!-- <div class="green">정상</div> -->
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="key">
+                        <img src="./img/ic_lipid_24.svg" alt="lipid">
+                        지질
+                    </div>
+                    <div class="value">
+                        <!-- <div class="red">집중 관리 필요</div> -->
+                        <!-- <div class="yellow">관리 필요</div> -->
+                        <div class="green">정상</div>
+                    </div>
+                </div>
+
+                <a href="#" class="anchorDown">혈당 상태로 바로가기</a>
+            </div>
+        </div>
+
+        <div class="conWrap conWrap-transparent">
+            <!-- component : frame_tipBanner -->
+            <div data-include-path="./component/frame_tipBanner.html"></div>
+        </div>
+
+        <div class="conWrap twoCard">
+            <h1>내 신체정보 관리</h1>
+            <div class="flex">
+                <div class="greyCard">
+                    키
+                    <div class="value">
+                        181cm
+                    </div>
+                </div>
+                <div class="greyCard">
+                    몸무게
+                    <div class="value">
+                        82kg
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conWrap twoCard">
+            <h1>건강관리 더 잘하기</h1>
+            <div class="flex">
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">3분 소요</div>
+                    <div class="tit">
+                        건강검진정보<br>
+                        등록하기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_heart.svg" alt="heart">
+                    </div>
+                </a>
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">1분 소요</div>
+                    <div class="tit">
+                        신체정보, 검사수치
+                        업데이트 하기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_value.svg" alt="value">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="conWrap twoCard">
+            <h1>지난 건강검진 기록</h1>
+            <div class="flex">
+                <div class="leftBx">
+                    <div class="date">2022년 11월</div>
+                    <h1>6개월 경과</h1>
+
+                </div>
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">3분 소요</div>
+                    <div class="tit">
+                        건강검진정보 최신기록 <br>
+                        업데이트
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_heart.svg" alt="heart">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="conWrap">
+            <div class="tab">
+                <a href="#" class="anchor ac">공복혈당</a>
+                <a href="#" class="anchor">지질</a>
+                <a href="#" class="anchor">혈압</a>
+            </div>
+
+            <div class="tabCon">
+                <div class="tit">
+                    <img src="./img/ic_glucose_24.svg" alt="glucose">
+                    <span class="name">공복혈당</span>
+                    <span class="legend">(mg/dl)</span>
+                </div>
+
+                <div class="result result-green">
+                    <div class="number">
+                        80
+                    </div>
+                    <div class="progress">
+                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                        <div class="value" style="width: 32%;"></div>
+                    </div>
+                    <div class="textWrap">
+                        <span class="smile"></span>
+                        <span class="text">유지 필요</span>
+                    </div>
+                </div>
+
+                <div class="chart-bar result-green">
+                    <div class="item">
+                        <div class="value"></div>
+                        <div class="bar" style="height:0%"></div>
+                        <div class="date">-</div>
+                    </div>
+                    <div class="item">
+                        <div class="value"></div>
+                        <div class="bar"></div>
+                        <div class="date">-</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">20</div>
+                        <div class="bar" style="height:20%"></div>
+                        <div class="date">2021.02</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">72</div>
+                        <div class="bar" style="height:72%"></div>
+                        <div class="date">2022.04</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">100</div>
+                        <div class="bar" style="height:100%"></div>
+                        <div class="date">2023.07</div>
+                    </div>
+                </div>
+
+                <div class="reportMsg">
+                    <div class="flex">
+                        총평
+                        <a href="#" class="detailView">자세히 알아보기</a>
+                    </div>
+                    <div class="msgBx">
+                        최근 검사의 혈당 수치가 정상입니다.<br>
+                        이전 검사에도 이상 수치없이 건강하십니다.
+                    </div>
+                </div>
+
+                <div class="reportMsg">
+                    <div class="flex">
+                        총평
+                        <a href="#" class="detailView">자세히 알아보기</a>
+                    </div>
+                    <div class="msgBx">
+                        최근 검사의 혈당 수치가 정상입니다.<br>
+                        이전 검사에도 이상 수치없이 건강하십니다.
+                    </div>
+                </div>
+
+                <button class="btn-subArr">전체 기록 보기</button>
+
+                
+            </div>
+        </div>
+
+        
+        
+        <div class="conWrap">
+
+            <!-- component : frame_rowAnchor -->
+            <div class="frame_rowAnchor">
+                <a href="#">
+                    <img src="/img/ic38_heart.svg" alt="heart">
+                    <!-- <img src="/img/ic38_report.svg" alt="report">
+                    <img src="/img/ic38_food.svg" alt="food"> -->
+                    <div><strong>건강 검진 정보</strong> 가져오기</div>
+                </a>
+            </div>
+            <!-- component : frame_rowAnchor -->
+            <div class="frame_rowAnchor">
+                <a href="#">
+                    <img src="/img/ic38_report.svg" alt="report">
+                    <div><strong>건강검진 분석보고서</strong> 예시보기</div>
+                </a>
+            </div>
+            <!-- component : frame_rowAnchor -->
+            <div class="frame_rowAnchor">
+                <a href="#">
+                    <img src="/img/ic38_food.svg" alt="food">
+                    <div><strong>모든 식단 프로그램</strong> 살펴보기</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="conWrap twoCard">
+            <h1>건강분석 이용 방법 👀</h1>
+            <p class="guide">
+                1. 건강검진정보 등록하기<br>
+                2. 건강분석 내용 확인
+            </p>
+            <a href="#" class="detailView">더 알아보기</a>
+
+            <div class="flex">
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">3분 소요</div>
+                    <div class="tit">
+                        건강검진정보<br>
+                        등록하기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_heart.svg" alt="heart">
+                    </div>
+                </a>
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">1분 소요</div>
+                    <div class="tit">
+                        신체정보, 검사수치
+                        업데이트 하기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_value.svg" alt="value">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="conWrap ">
+            <h1>
+                대사증후군 예방 영양제는 어떨까요? 💊
+            </h1>
+
+            <div class="storeItemWrap">
+
+                <div class="itemList">
+                    <!-- 각 list 당 storeItem은 세개씩만 넣어주세요 -->
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemList">
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemList">
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conWrap twoCard">
+            <h1>추천 👍🏼</h1>
+            <div class="flex">
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">3분 소요</div>
+                    <div class="tit">
+                        모든 식단 프로그램<br>
+                        살펴보기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_program.svg" alt="program">
+                    </div>
+                </a>
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">즉시완성</div>
+                    <div class="tit">
+                        자유식사<br>
+                        기록하기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_free.svg" alt="free">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- component : frame_footer -->
+        <div data-include-path="./component/frame_footer.html"></div>
+
+        <!-- component : frame_bottomNav -->
+        <div class="frame_bottomNav">
+            <ul>
+                <!-- 활성화된 메뉴에 .active -->
+                <li class="menu">
+                    <a class="btn" href="#">
+                        <div class="icon"></div>
+                        홈
+                    </a>
+                </li>
+                <li class="menu active">
+                    <a class="btn" href="#">
+                        <div class="icon"></div>
+                        건강
+                    </a>
+                </li>
+                <li class="menu">
+                    <a class="btn" href="#">
+                        <div class="icon"></div>
+                        식단
+                    </a>
+                </li>
+                <li class="menu">
+                    <a class="btn" href="#">
+                        <div class="icon"></div>
+                        내정보
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 배너 슬라이드 : slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.banner').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          });
+
+          $('.storeItemWrap').slick({
+            dots: true,
+            speed: 500,
+            infinite: true,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          });
+        });
+    </script>
+</body>
+</html>
