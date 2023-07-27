@@ -154,6 +154,9 @@ button {
     &.whiteBg {
         background-color: #fff;
     }
+    // &:has(.tab) {
+    //     overflow: visible;
+    // }
 }
 
 .conWrap {
@@ -1124,7 +1127,9 @@ button {
         }
     }
 }
-
+.storeItemWrap {
+    overflow: hidden;
+}
 .storeItem {
     display: flex;
     align-items: center;
@@ -1418,7 +1423,7 @@ button {
             z-index: -1;
         }
     }
-    .info {
+    .infoAlert {
         display: inline-block;
         border: 0;
         width: 32px;
@@ -1521,18 +1526,20 @@ button {
 }
 
 .tab{
+    background-color: #fff;
     display: flex;
     margin-left: -16px;
     margin-right: -16px;
-    position: sticky;
-    top: 0;
-    padding-top: 67px;
+    // position: sticky;
+    // top: 67px;
+    padding-top: 59px;
     &:first-of-type {
-        padding-top: 0;
+        // padding-top: 0;
     }
     .anchor {
         height: 55px;
         border-bottom: 1px solid var(--lightGrey2);
+        border-top:8px solid #F6F7F8 !important;
         color: 777;
         flex: 1 0 0;
         display: flex;
@@ -1746,5 +1753,33 @@ button {
             background-size: contain;
             margin-left: 9px;
         }
+    }
+}
+
+
+
+.druckerBanner {
+    background:url(../img/banner_sub_03.jpg) center/cover no-repeat;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 20px 16px;
+    min-height: 267px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    p {
+        font-size: 15px;
+        color: #fff;
+        font-weight: 400;
+    }
+    strong {
+        font-size: 15px;
+        color: #fff;
+        font-weight: 700;
+    }
+    .from {
+        font-size: 12px;
+        color: #C3D4CB;
     }
 }
