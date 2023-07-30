@@ -475,23 +475,25 @@
                 </div>
                 <a href="#" class="detailView">전체 기록 보기</a>
             </div>
-            <script>
-                const tabControl = document.getElementById('tabControl');
-                const tab = tabControl.querySelectorAll('.anchor');
-                const tabBody = tabControl.querySelectorAll('.tabBody');
-                console.log(tabBody)
-                for(i = 0; i < tab.length; i++) {
-                    tab[i].addEventListener('click', (e) => {
-                        for(j = 0; j < tab.length; j++) {
-                            tab[j].classList.remove('ac')
-                            tabBody[j].classList.remove('ac')
-                        }
-                        e.target.classList.add('ac')
-                        document.getElementById(e.target.id + 'Body').classList.add()
-                    })
-                }
-            </script>
         </div>
+        
+        <!-- tab 클릭 시 tabBody에 .ac 가 붙으며 display -->
+        <script>
+            const tabControl = document.getElementById('tabControl');
+            const tab = tabControl.querySelectorAll('.anchor');
+            const tabBody = tabControl.querySelectorAll('.tabBody');
+            console.log(tabBody)
+            for(i = 0; i < tab.length; i++) {
+                tab[i].addEventListener('click', (e) => {
+                    for(j = 0; j < tab.length; j++) {
+                        tab[j].classList.remove('ac')
+                        tabBody[j].classList.remove('ac')
+                    }
+                    e.target.classList.add('ac')
+                    document.getElementById(e.target.id + 'Body').classList.add('ac')
+                })
+            }
+        </script>
 
         <div class="conWrap ">
             <h1>
