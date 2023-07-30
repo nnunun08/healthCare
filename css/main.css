@@ -6,6 +6,7 @@
   --red: #FF0808;
   --yellow: #FFB21E;
   --green: #1ABC17;
+  --gra: linear-gradient(180deg, #FF6B63 0%, #FF50A4 100%);
 }
 
 body {
@@ -74,6 +75,12 @@ button {
   display: block;
   background: url(../img/detail_arr_pink.svg) center no-repeat;
 }
+.detailBlank.center,
+.detailView.center {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
 
 .detailBlank {
   font-size: 14px;
@@ -140,7 +147,16 @@ button {
   background-color: transparent;
   padding: 16px;
 }
-
+.conWrap.foodTop {
+  margin-top: 0;
+}
+.conWrap.foodTop .frame_rowAnchor {
+  margin-top: 16px;
+}
+.conWrap.foodTop .detailView.center {
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
 .frame_topNav {
   display: flex;
   align-items: center;
@@ -833,28 +849,28 @@ button {
   color: #808080;
   font-size: 15px;
 }
-.frame_foodPlan .graph .item {
+.frame_foodPlan .graph-progress .item {
   margin-bottom: 14px;
 }
-.frame_foodPlan .graph .item:last-child {
+.frame_foodPlan .graph-progress .item:last-child {
   margin-bottom: 0;
 }
-.frame_foodPlan .graph .item .text {
+.frame_foodPlan .graph-progress .item .text {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
 }
-.frame_foodPlan .graph .item .text .per {
+.frame_foodPlan .graph-progress .item .text .per {
   font-weight: 700;
 }
-.frame_foodPlan .graph .item .progress {
+.frame_foodPlan .graph-progress .item .progress {
   margin-top: 8px;
   height: 5px;
   background-color: var(--lightGrey2);
   width: 100%;
 }
-.frame_foodPlan .graph .item .progress .value {
+.frame_foodPlan .graph-progress .item .progress .value {
   height: 100%;
   background-color: var(--primary);
 }
@@ -1474,6 +1490,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 19px;
   border-radius: 8px;
   border: 1px solid #EFEFEF;
@@ -1709,7 +1726,7 @@ button {
   margin-left: -16px;
   margin-right: -16px;
   padding: 20px 16px;
-  min-height: 267px !important;
+  height: 208px !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1728,4 +1745,247 @@ button {
 .druckerBanner .from {
   font-size: 12px;
   color: #C3D4CB;
+}
+
+.foodSummary {
+  margin-left: -16px;
+  margin-right: -16px;
+  font-size: 14px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.foodSummary .status {
+  padding: 20px;
+  color: var(--primary);
+  text-align: center;
+}
+.foodSummary .bg {
+  background-image: var(--gra);
+  color: #fff;
+  margin-bottom: 16px;
+  height: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.foodSummary .nextMeal {
+  font-size: 16px;
+  font-weight: 700;
+}
+.foodSummary .control {
+  display: flex;
+  justify-content: space-between;
+}
+.foodSummary .control a {
+  flex: 1 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 51px;
+  border: 1px solid var(--lightGrey2);
+}
+.foodSummary .control a:first-child {
+  border-left: 0;
+  border-right: 0;
+}
+.foodSummary .control a:last-child {
+  border-right: 0;
+}
+
+.meal {
+  padding: 24px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--lightGrey2);
+  display: flex !important;
+  flex-direction: column;
+  gap: 16px;
+}
+.meal .flexBx {
+  justify-content: space-between;
+}
+.meal .time {
+  color: #696969;
+  font-weight: 700;
+}
+.meal .kcal {
+  font-weight: 700;
+}
+.meal .mealMenu {
+  color: #808080;
+}
+.meal .graph-progress .item {
+  margin-bottom: 14px;
+}
+.meal .graph-progress .item:last-child {
+  margin-bottom: 0;
+}
+.meal .graph-progress .item .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+.meal .graph-progress .item .text .per {
+  font-weight: 700;
+}
+.meal .graph-progress .item .progress {
+  margin-top: 8px;
+  height: 5px;
+  background-color: var(--lightGrey2);
+  width: 100%;
+}
+.meal .graph-progress .item .progress .value {
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.conWrapDonut .graph-progress .item {
+  margin-bottom: 14px;
+}
+.conWrapDonut .graph-progress .item:last-child {
+  margin-bottom: 0;
+}
+.conWrapDonut .graph-progress .item .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+.conWrapDonut .graph-progress .item .text .per {
+  font-weight: 700;
+}
+.conWrapDonut .graph-progress .item .progress {
+  margin-top: 8px;
+  height: 5px;
+  background-color: var(--lightGrey2);
+  width: 100%;
+}
+.conWrapDonut .graph-progress .item .progress .value {
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.graph-donut {
+  width: 180px;
+  height: 180px;
+  background-image: conic-gradient(var(--primary) 0% 0%, var(--lightGrey1) 0 100%);
+  margin: 30px auto;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.graph-donut .whiteHole {
+  width: 84px;
+  height: 84px;
+  border-radius: 100%;
+  background-color: #fff;
+  color: #777;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+.graph-donut .whiteHole .value {
+  font-size: 21px;
+  font-weight: 700;
+  color: #000;
+}
+.graph-donut .whiteHole .value:after {
+  content: " %";
+  font-size: 14px;
+}
+
+.refType {
+  margin-top: 60px;
+  text-align: center;
+}
+.refType .graph-progress .item {
+  margin-bottom: 14px;
+}
+.refType .graph-progress .item:last-child {
+  margin-bottom: 0;
+}
+.refType .graph-progress .item .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+.refType .graph-progress .item .text .per {
+  font-weight: 700;
+}
+.refType .graph-progress .item .progress {
+  margin-top: 8px;
+  height: 5px;
+  background-color: var(--lightGrey2);
+  width: 100%;
+}
+.refType .graph-progress .item .progress .value {
+  height: 100%;
+  background-color: var(--primary);
+}
+.refType .graph-progress .item .progress {
+  margin-top: 14px;
+  margin-bottom: 80px;
+}
+.refType .date {
+  color: #777;
+  font-size: 13px;
+  text-align: center;
+}
+.refType .standard {
+  display: inline-block;
+  padding: 10px;
+  background-color: #7E7E7E;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  position: relative;
+  margin-top: 16px;
+}
+.refType .standard::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  width: 1px;
+  height: 16px;
+  background-color: #7e7e7e;
+  margin: 0 auto;
+}
+.refType .value {
+  position: relative;
+}
+.refType .value .line {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  width: 1px;
+  height: 40px;
+  background-color: #7e7e7e;
+}
+.refType .accumulateWrap {
+  padding: 0 20px;
+}
+.refType .accumulateWrap .accumulateRail {
+  position: relative;
+}
+.refType .accumulateWrap .accumulateRail .accumulate {
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  transform: translateX(50%);
+  display: inline-block;
+  padding: 10px;
+  background-color: #7E7E7E;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
 }/*# sourceMappingURL=main.css.map */

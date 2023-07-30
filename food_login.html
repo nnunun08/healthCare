@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌레터생활건강</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap">
+
+        <!-- component : topNav -->
+        <div data-include-path="./component/frame_topNav.html"></div>
+
+
+        <div class="conWrap foodTop">
+            <div class="foodSummary">
+                <div class="status">다이어트 식단 진행중</div>
+                <div class="bg">
+                    <div>다음 식사</div>
+                    <div class="nextMeal">아침</div>
+                </div>
+                <div class="control">
+                    <a href="#">날짜별 식단보기</a>
+                    <a href="#">오늘 식단 변경</a>
+                </div>
+            </div>
+            <div class="mealWrap">
+                <div class="meal">
+                    <div class="flexBx">
+                        <span class="time">오늘 아침</span>
+                        <span class="kcal">800 kcal</span>
+                    </div>
+
+                    <div class="mealMenu">
+                        현미밥, 꾸지뽕 소고기 볶음, 미강 돼지고기 볶음 , 호박 왁저지 , 들깨 시래기나물 , 샐러드
+                    </div>
+
+                    <div class="graph-progress">
+                        <div class="item">
+                            <div class="text">
+                                <span class="type">탄수화물</span>
+                                <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                                <span class="per">80%</span>
+                            </div>
+                            <div class="progress">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="value" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <span class="type">단백질</span>
+                                <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                                <span class="per">62%</span>
+                            </div>
+                            <div class="progress">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="value" style="width: 62%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <span class="type">지방</span>
+                                <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                                <span class="per">26%</span>
+                            </div>
+                            <div class="progress">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="value" style="width: 26%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="detailView">자세히 보기</a>
+
+                </div>
+                <div class="meal">
+                    <div class="flexBx">
+                        <span class="time">오늘 점심</span>
+                        <span class="kcal">1200 kcal</span>
+                    </div>
+
+                    <div class="mealMenu">
+                        현미밥, 꾸지뽕 소고기 볶음, 미강 돼지고기 볶음 , 호박 왁저지 , 들깨 시래기나물 , 샐러드
+                    </div>
+
+                    <div class="graph-progress">
+                        <div class="item">
+                            <div class="text">
+                                <span class="type">탄수화물</span>
+                                <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                                <span class="per">32%</span>
+                            </div>
+                            <div class="progress">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="value" style="width: 32%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <span class="type">단백질</span>
+                                <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                                <span class="per">80%</span>
+                            </div>
+                            <div class="progress">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="value" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <span class="type">지방</span>
+                                <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                                <span class="per">26%</span>
+                            </div>
+                            <div class="progress">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="value" style="width: 26%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="detailView">자세히 보기</a>
+
+                </div>
+                <div class="meal">
+                    <div class="flexBx">
+                        <span class="time">오늘 저녁</span>
+                        <span class="kcal">2,300 kcal</span>
+                    </div>
+
+                    <div class="mealMenu">
+                        현미밥, 꾸지뽕 소고기 볶음, 미강 돼지고기 볶음 , 호박 왁저지 , 들깨 시래기나물 , 샐러드
+                    </div>
+
+                    <div class="graph-progress">
+                        <div class="item">
+                            <div class="text">
+                                <span class="type">탄수화물</span>
+                                <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                                <span class="per">32%</span>
+                            </div>
+                            <div class="progress">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="value" style="width: 32%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <span class="type">단백질</span>
+                                <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                                <span class="per">62%</span>
+                            </div>
+                            <div class="progress">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="value" style="width: 62%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <span class="type">지방</span>
+                                <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                                <span class="per">26%</span>
+                            </div>
+                            <div class="progress">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="value" style="width: 26%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="detailView">자세히 보기</a>
+
+                </div>
+            </div>
+
+            <a href="#" class="btn-subArr">이 식단 다음에 할게요</a>
+            
+            <!-- component : frame_rowAnchor -->
+            <div class="frame_rowAnchor">
+                <a href="#">
+                    <img src="/img/ic38_freefood.svg" alt="freefood">
+                    <div><strong>자유 식단</strong> 기록하기</div>
+                </a>
+            </div>
+
+            <a href="#" class="detailView center">모든 식단 보기</a>
+        </div>
+        
+        <div class="conWrap conWrap-transparent">
+            <!-- component : frame_tipBanner -->
+            <div class="frame_tipBanner">
+                <a href="#" style="background-image: url(/img/banner_sub_02.jpg);">
+                    <div class="subTit">건강 한 토막</div>
+                    <div class="tit">
+                        혈당이란<br>
+                        무엇인가?
+                    </div>
+                    <span class="badge">3분 소요</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="conWrap twoCard">
+            <h1>내 신체정보 관리</h1>
+            <div class="flex">
+                <div class="greyCard">
+                    <span>
+                        7월 식단 <br>
+                        평균섭취 칼로리
+                    </span>
+                    <div class="value">
+                        800 kcal
+                    </div>
+                </div>
+                <div class="greyCard">
+                    몸무게
+                    <div class="value">
+                        82 kg
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conWrap">
+            <div class="reportWrap">
+                <div class="flex">
+                    <div>
+                        <h1>식단보고서</h1>
+                        <span class="count">2</span>
+                    </div>
+                    <button class="read">모두읽음</button>
+                </div>
+                <div class="reportList">
+                    <div class="noData">모든 보고서를 확인했습니다.</div>
+                    <!-- reportList가 없으면 "모든 보고서를 확인했습니다." 문구가 출력됩니다. -->
+                    <a href="#" class="report">7월 월간 식단 보고서</a>
+                    <a href="#" class="report">7월 1주 식단 보고서</a>
+                </div>
+                <a href="" class="detailView">전체보기</a>
+            </div>
+        </div>
+
+        <div class="conWrap conWrapDonut">
+            <h1>07월 식단 진행 현황</h1>
+            <div class="graph-donut" id="donut01">
+                <div class="whiteHole">
+                    <div>전체 진행률</div>
+                    <div class="value">62.5</div>
+                </div>
+
+                <script type="text/javascript">
+                    // value 에 진행도 0~100 숫자 넣어주세요 
+                    let value = 25;
+                    const donut = document.getElementById('donut01');
+                    const donutValue = donut.querySelector('.value');
+                    donut.style.backgroundImage = `conic-gradient(#ff7272 0 ${value}%, #f6f7f8 0 100%)`
+                    donutValue.innerText = `${value}`
+                </script>
+
+            </div>
+
+
+            <div class="graph-progress">
+                <div class="item">
+                    <div class="text">
+                        <span class="type">균형잡힌 식사</span>
+                        <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                        <span class="per">32식</span>
+                    </div>
+                    <div class="progress">
+                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                        <div class="value" style="width: 32%;"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="text">
+                        <span class="type">탄수화물 위주 식사</span>
+                        <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                        <span class="per">12식</span>
+                    </div>
+                    <div class="progress">
+                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                        <div class="value" style="width: 62%;"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="text">
+                        <span class="type">단백질 위주 식사</span>
+                        <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                        <span class="per">4식</span>
+                    </div>
+                    <div class="progress">
+                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                        <div class="value" style="width: 26%;"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="text">
+                        <span class="type">지방 위주 식사</span>
+                        <!-- 진행도 수치를 값으로 넣어주세요. 0 ~ 100% -->
+                        <span class="per">3식</span>
+                    </div>
+                    <div class="progress">
+                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                        <div class="value" style="width: 18%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="conWrap">
+            <h1>누적칼로리</h1>
+            <div class="refType">
+                <div class="graph-progress">
+                    <div class="item">
+                        <div class="text">
+                            <span class="type">0 kcal</span>
+                            <!-- kcal 수치를 값으로 넣어주세요. -->
+                            <span class="per">100,000 kcal</span>
+                        </div>
+                        <div class="progress" id="progress01">
+                            <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                            <div class="value" style="width: 98%;">
+                                <div class="line"></div>
+                            </div>
+                            <div class="accumulateWrap">
+                                <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                                <div class="accumulateRail" style="width: 98%;">
+                                    <div class="accumulate">이번달 60,523</div>
+                                </div>
+                            </div>
+                            <div class="standard">
+                                지난달 50,321
+                            </div>
+                        </div>
+
+                        <script>
+                            // progressBar 에 진행도 0~100 숫자 넣어주세요 
+                            let progressBar = 72;
+                            const progress = document.getElementById('progress01');
+                            progress.querySelector('.value').style = `width: ${progressBar}%`
+                            progress.querySelector('.accumulateRail').style = `width: ${progressBar}%`
+                        </script>
+
+                        <div class="date">7월 12일 수요일(오늘) 기준</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conWrap twoCard">
+            <h1>식단 이용 방법 👀</h1>
+            <p class="guide">
+                1. 마음에 드는 식단 선택<br>
+                2. 끼니 및 시작 날짜 선택<br>
+                3. 식사 시작!
+            </p>
+            <a href="#" class="detailView">더 알아보기</a>
+
+            <div class="flex">
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">3분 소요</div>
+                    <div class="tit">
+                        모든 식단 프로그램<br>
+                        살펴보기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_program.svg" alt="program">
+                    </div>
+                </a>
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">3분 소요</div>
+                    <div class="tit">
+                        건강검진정보<br>
+                        등록하기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_heart.svg" alt="heart">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="conWrap ">
+            <h1>
+                식단을 기록하면,<br>
+                건강을 관리할 수 있습니다.
+            </h1>
+            <div class="druckerBanner">
+                <div class="top">
+                    <strong>
+                        측정할 수 없으면 관리할 수 없고,<br>
+                        관리할 수 없으면 개선시킬 수도 없다.
+                    </strong>
+                    <p>
+                        If you can not measure, <br>
+                        you can not manage.
+                    </p>
+                </div>
+                <div class="bottom">
+                    <div class="from">피터 드러커</div>
+                    <div class="from">Peter Ferdinand Drucker 1909~2005</div>
+                </div>
+            </div>
+            <div class="frame_bottomBtn" style="position: static;">
+                <!-- <button class="btn">닫기</button> -->
+                <a href="#" class="btn-mainArr">
+                    첫 식단 기록하기
+                </a>
+            </div>
+        </div>
+
+
+        <!-- component : frame_footer -->
+        <div data-include-path="./component/frame_footer.html"></div>
+
+        <!-- component : frame_bottomNav -->
+        <div class="frame_bottomNav">
+            <ul>
+                <!-- 활성화된 메뉴에 .active -->
+                <li class="menu">
+                    <a class="btn" href="#">
+                        <div class="icon"></div>
+                        홈
+                    </a>
+                </li>
+                <li class="menu ">
+                    <a class="btn" href="#">
+                        <div class="icon"></div>
+                        건강
+                    </a>
+                </li>
+                <li class="menu active">
+                    <a class="btn" href="#">
+                        <div class="icon"></div>
+                        식단
+                    </a>
+                </li>
+                <li class="menu">
+                    <a class="btn" href="#">
+                        <div class="icon"></div>
+                        내정보
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 배너 슬라이드 : slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.mealWrap').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          });
+        });
+    </script>
+
+</body>
+</html>

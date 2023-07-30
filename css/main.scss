@@ -7,6 +7,7 @@
     --red : #FF0808;
     --yellow : #FFB21E;
     --green : #1ABC17;
+    --gra : linear-gradient(180deg, #FF6B63 0%, #FF50A4 100%);
 }
 
 body {
@@ -85,6 +86,37 @@ button {
     }
 }
 
+@mixin graph-progress {
+    .graph-progress {
+        .item {
+            margin-bottom: 14px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .text {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 13px;
+                .per {
+                    font-weight: 700;
+                }
+            }
+            .progress {
+                margin-top: 8px;
+                height: 5px;
+                background-color: var(--lightGrey2);
+                width: 100%;
+                .value {
+                    height: 100%;
+                    background-color: var(--primary);
+                }
+            }
+
+        }
+    }
+}
+
 .detailBlank,
 .detailView {
     display: inline-flex;
@@ -98,6 +130,11 @@ button {
         height: 16px;
         display: block;
         background: url(../img/detail_arr_pink.svg) center no-repeat;
+    }
+    &.center {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
     }
 }
 .detailBlank {
@@ -166,6 +203,19 @@ button {
     &.conWrap-transparent {
         background-color: transparent;
         padding: 16px;
+    }
+    &.foodTop {
+        margin-top: 0;
+        .frame_rowAnchor {
+            margin-top: 16px;
+        }
+        .detailView.center {
+            margin-top: 35px;
+            margin-bottom: 10px;
+        }
+    }
+    &.conWrapDonut {
+
     }
 }
 
@@ -881,34 +931,7 @@ button {
 
     }
 
-    .graph {
-        .item {
-            margin-bottom: 14px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-            .text {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-size: 13px;
-                .per {
-                    font-weight: 700;
-                }
-            }
-            .progress {
-                margin-top: 8px;
-                height: 5px;
-                background-color: var(--lightGrey2);
-                width: 100%;
-                .value {
-                    height: 100%;
-                    background-color: var(--primary);
-                }
-            }
-
-        }
-    }
+    @include graph-progress;
 }
 
 .frame_kcalThumb {
@@ -1509,6 +1532,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 19px;
     border-radius: 8px;
     border: 1px solid #EFEFEF;
@@ -1763,7 +1787,7 @@ button {
     margin-left: -16px;
     margin-right: -16px;
     padding: 20px 16px;
-    min-height: 267px !important;
+    height: 208px !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1781,5 +1805,179 @@ button {
     .from {
         font-size: 12px;
         color: #C3D4CB;
+    }
+}
+
+
+.foodSummary {
+    margin-left: -16px;
+    margin-right: -16px;
+    font-size: 14px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    .status {
+        padding: 20px;
+        color: var(--primary);
+        text-align: center;
+    }
+    .bg {
+        background-image: var(--gra);
+        color: #fff;
+        margin-bottom: 16px;
+        height: 93px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .nextMeal {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .control {
+        display: flex;
+        justify-content: space-between;
+        a {
+            flex: 1 0 0 ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 51px;
+            border: 1px solid var(--lightGrey2);
+            &:first-child {
+                border-left: 0;
+                border-right: 0;
+            }
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+}
+.meal {
+    padding: 24px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--lightGrey2);
+    display: flex !important;
+    flex-direction: column;
+    gap: 16px;
+    .flexBx {
+        justify-content: space-between;
+    }
+    .time {
+        color: #696969;
+        font-weight: 700
+    }
+    .kcal {
+        font-weight: 700
+    }
+    .mealMenu {
+        color: #808080;
+    }
+    @include graph-progress;
+}
+
+.conWrapDonut {
+    @include graph-progress;
+
+}
+
+.graph-donut {
+    width: 180px;
+    height: 180px;
+    background-image: conic-gradient(var(--primary) 0% 0%, var(--lightGrey1) 0 100%);
+    margin: 30px auto;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .whiteHole {
+        width: 84px;
+        height: 84px;
+        border-radius: 100%;
+        background-color: #fff;
+        color: #777;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        .value {
+            font-size: 21px;
+            font-weight: 700;
+            color: #000;
+            &:after {
+                content: ' %';
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.refType {
+    margin-top: 60px;
+    @include graph-progress;
+    text-align: center;
+    .graph-progress .item .progress {
+        margin-top: 14px;
+        margin-bottom: 80px;
+    }
+    .date {
+        color: #777;
+        font-size: 13px;
+        text-align: center;
+    }
+    .standard {
+        display: inline-block;
+        padding: 10px;
+        background-color: #7E7E7E;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 12px;
+        position: relative;
+        margin-top: 16px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: 0;
+            right: 0;
+            width: 1px;
+            height: 16px;
+            background-color: #7e7e7e;
+            margin: 0 auto;
+        }
+    }
+    .value {
+        position: relative;
+        .line {
+            position: absolute;
+            right: 0;
+            bottom: 5px;
+            width: 1px;
+            height: 40px;
+            background-color: #7e7e7e;
+        }
+    }
+    .accumulateWrap {
+        padding: 0 20px;
+        .accumulateRail {
+            position: relative;
+            .accumulate {
+                white-space: nowrap;
+                position: absolute;
+                right: 0;
+                bottom: 40px;
+                transform: translateX(50%);
+                display: inline-block;
+                padding: 10px;
+                background-color: #7E7E7E;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 12px;
+            }
+        }
     }
 }
