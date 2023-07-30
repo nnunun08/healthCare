@@ -1696,6 +1696,9 @@ button {
     align-items: flex-end;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--lightGrey2);
+    .item:last-child .bar {
+        background-color: var(--primary);
+    }
     &.result-green {
         .item:last-child .bar {
             background-color: var(--green);
@@ -1979,5 +1982,37 @@ button {
                 font-size: 12px;
             }
         }
+    }
+}
+
+.tabBody {
+    display: none;
+    padding-top: 28px;
+    &.ac {
+        display: block;
+    }
+    .flexBx {
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1 {
+        margin-bottom: 0;
+    }
+    .legend {
+        font-size: 13px;
+        color: #777;
+    }
+    .currentValue {
+        font-size: 21px;
+        font-weight: 700;
+        color: var(--primary);
+        margin-top: 4px;
+        margin-bottom: 28px;
+    }
+    .detailView {
+        margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

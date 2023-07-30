@@ -361,6 +361,294 @@
             </div>
         </div>
 
+        <div class="conWrap" style="margin-top:-100px" id="tabControl">
+            <div class="tab">
+                <a id="tab01" class="anchor ac">탄수화물</a>
+                <a id="tab02" class="anchor">단백질</a>
+                <a id="tab03" class="anchor">지방</a>
+            </div>
+
+            <div class="tabBody ac" id="tab01Body">
+                <div class="flexBx">
+                    <h1>탄수화물</h1>
+                    <span class="legend">단위 g</span>
+                </div>
+                <div class="currentValue">72,203</div>
+                <div class="chart-bar">
+                    <div class="item">
+                        <div class="value"></div>
+                        <div class="bar" style="height:0%"></div>
+                        <div class="date">4달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value"></div>
+                        <div class="bar"></div>
+                        <div class="date">3달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">20</div>
+                        <div class="bar" style="height:20%"></div>
+                        <div class="date">2달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">72</div>
+                        <div class="bar" style="height:72%"></div>
+                        <div class="date">1달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">100</div>
+                        <div class="bar" style="height:100%"></div>
+                        <div class="date">이번 달</div>
+                    </div>
+                </div>
+                <a href="#" class="detailView">전체 기록 보기</a>
+            </div>
+
+            <div class="tabBody" id="tab02Body">
+                <div class="flexBx">
+                    <h1>단백질</h1>
+                    <span class="legend">단위 g</span>
+                </div>
+                <div class="currentValue">72,203</div>
+                <div class="chart-bar">
+                    <div class="item">
+                        <div class="value"></div>
+                        <div class="bar" style="height:0%"></div>
+                        <div class="date">4달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value"></div>
+                        <div class="bar"></div>
+                        <div class="date">3달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">20</div>
+                        <div class="bar" style="height:20%"></div>
+                        <div class="date">2달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">72</div>
+                        <div class="bar" style="height:72%"></div>
+                        <div class="date">1달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">100</div>
+                        <div class="bar" style="height:100%"></div>
+                        <div class="date">이번 달</div>
+                    </div>
+                </div>
+                <a href="#" class="detailView">전체 기록 보기</a>
+            </div>
+
+            <div class="tabBody" id="tab03Body">
+                <div class="flexBx">
+                    <h1>지방</h1>
+                    <span class="legend">단위 g</span>
+                </div>
+                <div class="currentValue">72,203</div>
+                <div class="chart-bar">
+                    <div class="item">
+                        <div class="value"></div>
+                        <div class="bar" style="height:0%"></div>
+                        <div class="date">4달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value"></div>
+                        <div class="bar"></div>
+                        <div class="date">3달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">20</div>
+                        <div class="bar" style="height:20%"></div>
+                        <div class="date">2달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">72</div>
+                        <div class="bar" style="height:72%"></div>
+                        <div class="date">1달 전</div>
+                    </div>
+                    <div class="item">
+                        <div class="value">100</div>
+                        <div class="bar" style="height:100%"></div>
+                        <div class="date">이번 달</div>
+                    </div>
+                </div>
+                <a href="#" class="detailView">전체 기록 보기</a>
+            </div>
+            <script>
+                const tabControl = document.getElementById('tabControl');
+                const tab = tabControl.querySelectorAll('.anchor');
+                const tabBody = tabControl.querySelectorAll('.tabBody');
+                console.log(tabBody)
+                for(i = 0; i < tab.length; i++) {
+                    tab[i].addEventListener('click', (e) => {
+                        for(j = 0; j < tab.length; j++) {
+                            tab[j].classList.remove('ac')
+                            tabBody[j].classList.remove('ac')
+                        }
+                        e.target.classList.add('ac')
+                        document.getElementById(e.target.id + 'Body').classList.add()
+                    })
+                }
+            </script>
+        </div>
+
+        <div class="conWrap ">
+            <h1>
+                대사증후군 예방 영양제는 어떨까요? 💊
+            </h1>
+
+            <div class="storeItemWrap">
+
+                <div class="itemList">
+                    <!-- 각 list 당 storeItem은 세개씩만 넣어주세요 -->
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemList">
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemList">
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conWrap twoCard">
+            <h1>추천 👍🏼</h1>
+            <div class="flex">
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">3분 소요</div>
+                    <div class="tit">
+                        모든 식단 프로그램<br>
+                        살펴보기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_program.svg" alt="program">
+                    </div>
+                </a>
+
+                <!-- component : frame_quickCard -->
+                <a href="#" class="frame_quickCard">
+                    <div class="time">즉시완성</div>
+                    <div class="tit">
+                        자유식사<br>
+                        기록하기
+                    </div>
+                    <div class="icon">
+                        <img src="/img/icon_58_free.svg" alt="free">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
         <div class="conWrap twoCard">
             <h1>식단 이용 방법 👀</h1>
             <p class="guide">
@@ -399,34 +687,31 @@
 
         </div>
 
-        <div class="conWrap ">
-            <h1>
-                식단을 기록하면,<br>
-                건강을 관리할 수 있습니다.
-            </h1>
-            <div class="druckerBanner">
-                <div class="top">
-                    <strong>
-                        측정할 수 없으면 관리할 수 없고,<br>
-                        관리할 수 없으면 개선시킬 수도 없다.
-                    </strong>
-                    <p>
-                        If you can not measure, <br>
-                        you can not manage.
-                    </p>
-                </div>
-                <div class="bottom">
-                    <div class="from">피터 드러커</div>
-                    <div class="from">Peter Ferdinand Drucker 1909~2005</div>
-                </div>
-            </div>
-            <div class="frame_bottomBtn" style="position: static;">
-                <!-- <button class="btn">닫기</button> -->
-                <a href="#" class="btn-mainArr">
-                    첫 식단 기록하기
+        <div class="conWrap conWrap-transparent">
+            <!-- component : frame_tipBanner -->
+            <div class="frame_tipBanner">
+                <a href="#" style="background-image: url(/img/banner_sub_02.jpg);">
+                    <div class="subTit">건강 한 토막</div>
+                    <div class="tit">
+                        식단과 건강은<br>
+                        어떤 관계가 있을까요?
+                    </div>
+                    <span class="badge">3분 소요</span>
                 </a>
             </div>
         </div>
+
+        <div class="conWrap" style="">
+            <!-- component : frame_mainBtn -->
+            <div class="frame_mainBtn">
+                <a href="#" class="btn-mainArr">
+                    맞춤 식단으로 건강 관리하기
+                </a>
+                <p class="desc">(유료)약관 동의가 필요합니다.</p>
+                <!-- <a href="#" class="desc">PASS헬스케어 무료 회원가입 바로가기</a> -->
+            </div>
+        </div>
+
 
 
         <!-- component : frame_footer -->
@@ -475,6 +760,16 @@
             dots: true,
             infinite: true,
             speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          });
+
+          $('.storeItemWrap').slick({
+            dots: true,
+            speed: 500,
+            infinite: true,
             slidesToShow: 1,
             adaptiveHeight: true,
             autoplay: true,

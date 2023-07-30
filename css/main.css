@@ -1644,6 +1644,9 @@ button {
   padding-bottom: 16px;
   border-bottom: 1px solid var(--lightGrey2);
 }
+.chart-bar .item:last-child .bar {
+  background-color: var(--primary);
+}
 .chart-bar.result-green .item:last-child .bar {
   background-color: var(--green);
 }
@@ -1988,4 +1991,36 @@ button {
   border-radius: 4px;
   color: #fff;
   font-size: 12px;
+}
+
+.tabBody {
+  display: none;
+  padding-top: 28px;
+}
+.tabBody.ac {
+  display: block;
+}
+.tabBody .flexBx {
+  justify-content: space-between;
+  align-items: center;
+}
+.tabBody h1 {
+  margin-bottom: 0;
+}
+.tabBody .legend {
+  font-size: 13px;
+  color: #777;
+}
+.tabBody .currentValue {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 4px;
+  margin-bottom: 28px;
+}
+.tabBody .detailView {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
