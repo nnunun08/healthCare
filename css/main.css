@@ -721,7 +721,8 @@ button {
 .landingWrap .visual img {
   width: 100%;
   height: 391px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .landingWrap .visual .tit {
   position: absolute;
@@ -992,7 +993,8 @@ button {
 .frame_quickCard .icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .quickCardWrap {
@@ -1114,7 +1116,8 @@ button {
 .storeItem .imgWrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .storeItem .textWrap {
   display: flex;
@@ -1175,7 +1178,8 @@ button {
 .frame_newsItem .imgWrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .frame_newsItem .imgWrap {
   width: 100%;
@@ -1184,6 +1188,7 @@ button {
   border-radius: 8px;
 }
 .frame_newsItem .imgWrap img {
+  width: 100%;
   transition: 0.3s ease-in-out;
 }
 .frame_newsItem .imgWrap::before {

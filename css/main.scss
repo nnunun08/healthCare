@@ -1204,6 +1204,7 @@ button {
         aspect-ratio: 1/1;
         border-radius: 8px;
         img {
+            width: 100%;
             transition: 0.3s ease-in-out;
         }
         &::before {
