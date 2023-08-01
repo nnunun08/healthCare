@@ -59,6 +59,32 @@ button {
   gap: 10px;
 }
 
+.graph-progress .item {
+  margin-bottom: 14px;
+}
+.graph-progress .item:last-child {
+  margin-bottom: 0;
+}
+.graph-progress .item .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+.graph-progress .item .text .per {
+  font-weight: 700;
+}
+.graph-progress .item .progress {
+  margin-top: 8px;
+  height: 5px;
+  background-color: var(--lightGrey2);
+  width: 100%;
+}
+.graph-progress .item .progress .value {
+  height: 100%;
+  background-color: var(--primary);
+}
+
 .detailBlank,
 .detailView {
   display: inline-flex;
@@ -137,6 +163,9 @@ button {
 .serviceWrap.whiteBg {
   background-color: #fff;
 }
+.serviceWrap:has(.fixed .frame_mainBtn) {
+  padding-bottom: 146px;
+}
 
 .conWrap {
   background-color: #fff;
@@ -157,6 +186,15 @@ button {
   margin-top: 35px;
   margin-bottom: 10px;
 }
+.conWrap.fixed {
+  max-width: 600px;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 .frame_topNav {
   display: flex;
   align-items: center;
@@ -513,6 +551,7 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 .frame_bottomNav ul {
   margin: 0 auto;
@@ -569,6 +608,7 @@ button {
   color: #000;
 }
 
+.frame_form .ev-modal,
 .frame_confirm .ev-modal,
 .frame_alert .ev-modal {
   position: fixed;
@@ -585,10 +625,12 @@ button {
   align-items: center;
   box-sizing: border-box;
 }
+.frame_form .ev-modal.ac,
 .frame_confirm .ev-modal.ac,
 .frame_alert .ev-modal.ac {
   display: flex;
 }
+.frame_form .ev-modal .dim,
 .frame_confirm .ev-modal .dim,
 .frame_alert .ev-modal .dim {
   width: 100%;
@@ -601,6 +643,7 @@ button {
   bottom: 0;
   z-index: -1;
 }
+.frame_form .ev-modal .card,
 .frame_confirm .ev-modal .card,
 .frame_alert .ev-modal .card {
   background-color: #fff;
@@ -613,21 +656,25 @@ button {
   width: 100%;
   max-width: 540px;
 }
+.frame_form .ev-modal .card .tit,
 .frame_confirm .ev-modal .card .tit,
 .frame_alert .ev-modal .card .tit {
   font-size: 18px;
   font-weight: 700;
 }
+.frame_form .ev-modal .card .desc,
 .frame_confirm .ev-modal .card .desc,
 .frame_alert .ev-modal .card .desc {
   font-size: 14px;
   margin-top: 17px;
 }
+.frame_form .ev-modal .card .btnWrap,
 .frame_confirm .ev-modal .card .btnWrap,
 .frame_alert .ev-modal .card .btnWrap {
   display: flex;
   gap: 10px;
 }
+.frame_form .ev-modal .card .btnWrap .btn,
 .frame_confirm .ev-modal .card .btnWrap .btn,
 .frame_alert .ev-modal .card .btnWrap .btn {
   cursor: pointer;
@@ -641,15 +688,61 @@ button {
   font-weight: 700;
   border-radius: 4px;
 }
+.frame_form .ev-modal .card .btnWrap .btn.btn-true,
 .frame_confirm .ev-modal .card .btnWrap .btn.btn-true,
 .frame_alert .ev-modal .card .btnWrap .btn.btn-true {
   color: #fff;
   background-color: var(--primary);
 }
+.frame_form .ev-modal .card .btnWrap .btn.btn-false,
 .frame_confirm .ev-modal .card .btnWrap .btn.btn-false,
 .frame_alert .ev-modal .card .btnWrap .btn.btn-false {
   color: #000;
   background-color: #e6e6e6;
+}
+
+.frame_form .date {
+  font-size: 14px;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+.frame_form .formWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.frame_form .inputBx {
+  width: 100%;
+  height: 52px;
+  position: relative;
+}
+.frame_form .inputBx .label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 500;
+}
+.frame_form .inputBx input {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  padding-left: 50%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  text-align: right;
+}
+.frame_form .inputBx input::placeholder {
+  color: #aaa;
+  font-weight: 400;
+}
+.frame_form .inputBx input:focus {
+  outline: 1px solid var(--primary);
 }
 
 .frame_topNavSub {
@@ -673,6 +766,7 @@ button {
   font-size: 18px;
   font-weight: 700;
 }
+.frame_topNavSub .back,
 .frame_topNavSub .close {
   position: absolute;
   left: 16px;
@@ -684,6 +778,9 @@ button {
   border: 0;
   padding: 0;
   cursor: pointer;
+}
+.frame_topNavSub .back {
+  background-image: url(../img/nav_top_back.svg);
 }
 
 .privacy h5 {
@@ -707,6 +804,12 @@ button {
   padding: 16px;
   margin: 0 auto;
 }
+.frame_bottomBtn.transparent {
+  background-color: transparent;
+}
+.frame_bottomBtn button::after {
+  display: none;
+}
 
 .landingWrap {
   background-color: #222;
@@ -721,8 +824,7 @@ button {
 .landingWrap .visual img {
   width: 100%;
   height: 391px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .landingWrap .visual .tit {
   position: absolute;
@@ -993,8 +1095,7 @@ button {
 .frame_quickCard .icon img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .quickCardWrap {
@@ -1116,8 +1217,7 @@ button {
 .storeItem .imgWrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .storeItem .textWrap {
   display: flex;
@@ -1178,8 +1278,7 @@ button {
 .frame_newsItem .imgWrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .frame_newsItem .imgWrap {
   width: 100%;
@@ -1336,6 +1435,14 @@ button {
   background-color: rgba(12, 12, 12, 0.5);
 }
 
+.rowAnchorLabel {
+  font-size: 14px;
+  color: #7A7A7A;
+  padding: 0 16px;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
 .frame_rowAnchor {
   margin-top: 10px;
 }
@@ -1365,6 +1472,15 @@ button {
   background: url(../img/arr_24_g.svg) center/cover no-repeat;
   width: 24px;
   height: 24px;
+}
+.frame_rowAnchor.whiteVer {
+  margin: 0;
+}
+.frame_rowAnchor.whiteVer a {
+  border-radius: 0;
+  background-color: #fff;
+  padding: 16px;
+  font-size: 14px;
 }
 
 .twoCard .guide {
@@ -2028,4 +2144,231 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.inputBarHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  margin-top: 20px;
+}
+.inputBarHead h1 {
+  font-size: 18px;
+  margin: 0;
+}
+.inputBarHead .detailView {
+  font-size: 14px;
+  font-weight: 500;
+}
+.inputBarHead .detailView::after {
+  display: none;
+}
+
+.inputBar {
+  width: 100%;
+  padding: 17px 16px;
+  background-color: #fff;
+  border: 0;
+  border-top: 1px solid #E2E8EE;
+  font-size: 16px;
+  color: #000;
+}
+.inputBar .record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputBar .record .key {
+  font-size: 16px;
+}
+.inputBar .record .value {
+  font-weight: 700;
+}
+.inputBar .record .legend {
+  color: #7A7A7A;
+  margin-left: 4px;
+}
+.inputBar .record .status {
+  margin-left: 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  width: 42px;
+  height: 23px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+.inputBar .record .status.abnormal {
+  background: rgba(255, 8, 8, 0.2);
+  color: var(--red);
+}
+.inputBar .record .status.normal {
+  background: rgba(26, 188, 23, 0.2);
+  color: var(--green);
+}
+.inputBar .record .insertData {
+  color: #AEAEAE;
+  font-size: 14px;
+  line-height: 23px;
+}
+.inputBar .record .recordData {
+  display: flex;
+  align-items: center;
+}
+.inputBar .update {
+  margin-top: 8px;
+  text-align: right;
+  color: #A9A9A9;
+  font-size: 12px;
+}
+.inputBar.multi .record {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.inputBar.multi .key {
+  margin-bottom: 14px;
+}
+.inputBar.multi .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 6px 0;
+}
+.inputBar.multi .list h3 {
+  font-size: 16px;
+  color: #888888;
+}
+
+.myHealthHistory .noItem {
+  display: none;
+  font-size: 16px;
+  color: #a9a9a9;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  height: calc(100vh - 164px);
+}
+.myHealthHistory .noItem:only-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myHealthHistory .item {
+  padding: 16px 12px 0;
+}
+.myHealthHistory .item .date {
+  font-size: 16px;
+  color: #717171;
+  margin-bottom: 6px;
+  margin-left: 8px;
+}
+.myHealthHistory .item .card {
+  padding: 20px 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #E2E8EE;
+}
+.myHealthHistory .item .card .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.myHealthHistory .item .card .list + .list {
+  margin-top: 12px;
+}
+.myHealthHistory .item .card .label {
+  color: #888;
+}
+.myHealthHistory .item .card .recordData {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.myHealthHistory .item .card .value {
+  color: #000;
+  font-weight: 700;
+}
+.myHealthHistory .item .card .legend {
+  color: #7a7a7a;
+}
+
+.reportSummary {
+  margin-bottom: 40px;
+}
+.reportSummary .top {
+  padding: 10px 16px 21px;
+  font-size: 16px;
+}
+.reportSummary .score {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.reportSummary .score .total {
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.reportSummary .score .percent {
+  font-size: 13px;
+  color: #fff;
+  background-color: var(--primary);
+  padding: 3px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 20px;
+  margin-left: 12px;
+}
+.reportSummary .score .percent::before {
+  content: "";
+  display: block;
+}
+.reportSummary .score .percent.up::before {
+  width: 7px;
+  border: 5px solid transparent;
+  border-top: 0;
+  border-bottom: 5.5px solid #fff;
+  box-sizing: border-box;
+}
+.reportSummary .score .percent.down::before {
+  width: 7px;
+  border: 5px solid transparent;
+  border-bottom: 0;
+  border-top: 5.5px solid #fff;
+  box-sizing: border-box;
+}
+.reportSummary .target {
+  opacity: 0.5;
+  font-size: 14px;
+}
+.reportSummary .reportTable {
+  background-color: #fff;
+}
+.reportSummary .reportTable table {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 14px;
+}
+.reportSummary .reportTable th, .reportSummary .reportTable td {
+  box-sizing: border-box;
+  height: 42px;
+  vertical-align: middle;
+  padding: 16px 4px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.reportSummary .reportTable th {
+  color: #717171;
+  border-bottom: 1px solid #F6F7F8;
+}
+.reportSummary .reportTable td:nth-child(1) {
+  text-align: left;
+  padding-left: 16px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌레터생활건강</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap">
+        <!-- component : frame_topNavSub -->
+        <div class="frame_topNavSub">
+            <button class="close"></button>
+            <div class="tit">주간 식단 보고서</div>
+        </div>
+
+
+        <div class="reportSummary">
+            <div class="top">
+                <div>이번주 총 섭취칼로리</div>
+                <div class="score">
+                    <span class="total">32,181</span>
+                    <span>kcal</span>
+                    <!-- 
+                        .percent .up or .down 으로 화살표 조정 됩니다.
+                        .up => 위화살표
+                        .down => 아래화살표
+                     -->
+                    <span class="percent up">
+                        173%
+                    </span>
+                </div>
+                <div class="target">
+                    목표 열량 1,826kcal
+                </div>
+            </div>
+
+            <div class="reportTable">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>세부목표</th>
+                        <th>기록</th>
+                        <th>달성률</th>
+                    </tr>
+                    <tr>
+                        <td>탄수화물</td>
+                        <td>0mg</td>
+                        <td>32,181mg</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td>단백질</td>
+                        <td>0mg</td>
+                        <td>32,181mg</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td>지방</td>
+                        <td>0mg</td>
+                        <td>32,181mg</td>
+                        <td>0%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="rowAnchorLabel">누적 칼로리 현황</div>
+        <div class="conWrap">
+            <h2 style="font-weight: 700; margin-bottom:20px;">오늘 기준 칼로리 섭취량입니다.</h2>
+            <div class="graph-progress">
+                <div class="item">
+                    <div class="text">
+                        <span class="type">지난 달 전체</span>
+                        <!-- 칼로리 값으로 넣어주세요. -->
+                        <span class="per">4,800 kcal</span>
+                    </div>
+                    <div class="progress">
+                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                        <div class="value" style="width: 32%;"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="text">
+                        <span class="type">이번 달</span>
+                        <!-- 칼로리 값으로 넣어주세요. -->
+                        <span class="per">48,981 kcal</span>
+                    </div>
+                    <div class="progress">
+                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                        <div class="value" style="width: 62%;"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="text">
+                        <span class="type">이번 주</span>
+                        <!-- 칼로리 값으로 넣어주세요. -->
+                        <span class="per">32,181 kcal</span>
+                    </div>
+                    <div class="progress">
+                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
+                        <div class="value" style="width: 26%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conWrap">
+            <h1>어제의 섭취 칼로리</h1>
+            <div class="frame_kcalThumb">
+                <div>
+                    <strong>2,014</strong>
+                    <em>kcal</em>
+                </div>
+                <ul>
+                    <!-- li에 .ac 넣어주면 display 됩니다. -->
+                    <li>
+                        <span class="message good">매우 좋아요!</span>
+                        <img src="./img/kcal_good.svg" alt="smile">
+                    </li>
+                    <li>
+                        <span class="message normal">적당해요!</span>
+                        <img src="./img/kcal_normal.svg" alt="smile">
+                    </li>
+                    <li class="ac">
+                        <span class="message bad">조금 낮아요</span>
+                        <img src="./img/kcal_bad.svg" alt="smile">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="conWrap ">
+            <h1>
+                대사증후군 예방 영양제는 어떨까요? 💊
+            </h1>
+
+            <div class="storeItemWrap">
+
+                <div class="itemList">
+                    <!-- 각 list 당 storeItem은 세개씩만 넣어주세요 -->
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemList">
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemList">
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="storeItem">
+                        <div class="imgWrap">
+                            <img src="./img/contents/thumb_item.jpg" alt="item">
+                        </div>
+                        <div class="textWrap">
+                            <div>
+                                <div class="brand">내츄럴팩터스</div>
+                                <div class="name">베르베린 500mg 베지 캡슐 120정</div>
+                            </div>
+                            <a href="#" target="_blank" class="detailBlank">iHerb 에서 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="conWrap conWrap-transparent">
+            <!-- component : frame_rowAnchor -->
+            <div class="frame_rowAnchor">
+                <a href="#" style="background-color: #fff;">
+                    <img src="./img//ic38_food.svg" alt="food">
+                    <div><strong>모든 식단 프로그램</strong> 살펴보기</div>
+                </a>
+            </div>
+        </div>
+        
+        
+
+        
+
+
+        <!-- component : frame_footer -->
+        <div data-include-path="./component/frame_footer.html"></div>
+
+        <div class="conWrap fixed">
+            <!-- component : frame_mainBtn -->
+            <div class="frame_mainBtn">
+                <a href="#" class="btn-mainArr">
+                    식단으로 건강 관리하기
+                </a>
+                <p class="desc">(유료)약관 동의가 필요합니다.</p>
+            </div>
+        </div>
+
+        <!-- component : frame_bottomBtn -->
+        <!-- <div class="frame_bottomBtn">
+            <a href="#" class="btn-mainArr">
+                닫기
+            </a>
+            <p class="desc">(유료)약관 동의가 필요합니다.</p>
+        </div> -->
+    </div>
+
+
+
+    
+
+    <!-- 배너 슬라이드 : slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.storeItemWrap').slick({
+            dots: true,
+            speed: 500,
+            infinite: true,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          });
+        });
+    </script>
+    
+</body>
+</html>
