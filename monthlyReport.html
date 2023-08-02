@@ -19,127 +19,212 @@
         <!-- component : frame_topNavSub -->
         <div class="frame_topNavSub">
             <button class="close"></button>
-            <div class="tit">주간 식단 보고서</div>
+            <div class="tit">월간 식단 보고서</div>
         </div>
 
+        <div class="reportSummary" style="margin-bottom: 0;">
 
-        <div class="reportSummary">
             <div class="top">
-                <div>이번주 총 섭취칼로리</div>
+                <div>2023.07.01 ~ 2023.07.16</div>
                 <div class="score">
-                    <span class="total">32,181</span>
-                    <span>kcal</span>
-                    <!-- 
-                        .percent .up or .down 으로 화살표 조정 됩니다.
-                        .up => 위화살표
-                        .down => 아래화살표
-                     -->
-                    <span class="percent up">
-                        173%
-                    </span>
+                    <span class="month">7월 식단 보고서</span>
                 </div>
-                <div class="target">
-                    목표 열량 1,826kcal
-                </div>
-            </div>
 
-            <div class="reportTable">
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>세부목표</th>
-                        <th>기록</th>
-                        <th>달성률</th>
-                    </tr>
-                    <tr>
-                        <td>탄수화물</td>
-                        <td>0mg</td>
-                        <td>32,181mg</td>
-                        <td>0%</td>
-                    </tr>
-                    <tr>
-                        <td>단백질</td>
-                        <td>0mg</td>
-                        <td>32,181mg</td>
-                        <td>0%</td>
-                    </tr>
-                    <tr>
-                        <td>지방</td>
-                        <td>0mg</td>
-                        <td>32,181mg</td>
-                        <td>0%</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-
-        <div class="rowAnchorLabel">누적 칼로리 현황</div>
-        <div class="conWrap">
-            <h2 style="font-weight: 700; margin-bottom:20px;">오늘 기준 칼로리 섭취량입니다.</h2>
-            <div class="graph-progress">
-                <div class="item">
-                    <div class="text">
-                        <span class="type">지난 달 전체</span>
-                        <!-- 칼로리 값으로 넣어주세요. -->
-                        <span class="per">4,800 kcal</span>
+                <div class="twoCard">
+                    <div class="card">
+                        <img src="./img/report_write.svg" alt="write">
+                        <div class="type">기록한 식단</div>
+                        <div class="count">72 식</div>
                     </div>
-                    <div class="progress">
-                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
-                        <div class="value" style="width: 32%;"></div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="text">
-                        <span class="type">이번 달</span>
-                        <!-- 칼로리 값으로 넣어주세요. -->
-                        <span class="per">48,981 kcal</span>
-                    </div>
-                    <div class="progress">
-                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
-                        <div class="value" style="width: 62%;"></div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="text">
-                        <span class="type">이번 주</span>
-                        <!-- 칼로리 값으로 넣어주세요. -->
-                        <span class="per">32,181 kcal</span>
-                    </div>
-                    <div class="progress">
-                        <!-- 진행도 수치를 width로 설정해주세요. 0 ~ 100% -->
-                        <div class="value" style="width: 26%;"></div>
+                    <div class="card">
+                        <img src="./img/report_write.svg" alt="write">
+                        <div class="type">기록 안한 식단</div>
+                        <div class="count">7 식</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="conWrap">
-            <h1>어제의 섭취 칼로리</h1>
-            <div class="frame_kcalThumb">
-                <div>
-                    <strong>2,014</strong>
-                    <em>kcal</em>
-                </div>
-                <ul>
-                    <!-- li에 .ac 넣어주면 display 됩니다. -->
-                    <li>
-                        <span class="message good">매우 좋아요!</span>
-                        <img src="./img/kcal_good.svg" alt="smile">
-                    </li>
-                    <li>
-                        <span class="message normal">적당해요!</span>
-                        <img src="./img/kcal_normal.svg" alt="smile">
-                    </li>
-                    <li class="ac">
-                        <span class="message bad">조금 낮아요</span>
-                        <img src="./img/kcal_bad.svg" alt="smile">
-                    </li>
-                </ul>
+        <div class="perTarget">
+            <h3>기록 / 목표 칼로리</h3>
+            <div class="legend">(kcal)</div>
+            <div class="flexBx">
+                <span class="performance">750,000</span>
+                <span class="target">/ 450,000</span>
+            </div>
+            <!-- 
+                .percent .up or .down 으로 화살표 조정 됩니다.
+                .up => 위화살표
+                .down => 아래화살표
+            -->
+            <div class="percent up">
+                173%
             </div>
         </div>
 
-        <div class="conWrap ">
+        <div class="rowValue">
+            <div class="label">목표 대비</div>
+            <div class="flexBx">
+                <div class="value">+300,000 kcal</div>
+                <!-- 좋은 수치 일 경우 normal -->
+                <div class="status normal">초과</div>
+            </div>
+        </div>
+        <div class="rowValue">
+            <div class="label">7월 대비</div>
+            <div class="flexBx">
+                <div class="value">+500,000 kcal</div>
+                <!-- 안 좋은 수치 일 경우 abnormal -->
+                <div class="status abnormal">증가</div>
+            </div>
+        </div>
+
+        <div class="targetGraph">
+            <div class="legend">
+                <img src="./img/ic_target_line.png" alt="targetLine">
+                목표치
+            </div>
+
+            <div class="chart-bar targetType">
+                <!-- 
+                    **targetType chart-bar 그래프 가이드**
+                    
+                    .targetLine 이 목표치 라인입니다.
+                    중간 정도에 위치하게 했습니다. (top:50%)
+                    20~70% 값으로 높이값을 조절할 수 있습니다.
+                    targetLine은 고정으로 넣어두고
+                    .bar height를 퍼센트로 값을 넣어 그래프를 그려야합니다.
+                    .bar height는 0 ~ 100% 를 사용할 수 있습니다.
+                -->
+                <div class="item">
+                    <div class="targetLine" style="top:50%"></div>
+                    <div class="bar" style="height:65%"></div>
+                    <div class="date">2023.07</div>
+                </div>
+                <div class="item">
+                    <div class="targetLine" style="top:50%"></div>
+                    <div class="bar" style="height: 80%;"></div>
+                    <div class="date">2023.08</div>
+                </div>
+            </div>
+
+            <div class="roundName">이전 달과 칼로리 기록 비교</div>
+
+        </div>
+
+        <div class="programFood">
+            <div class="imgWrap"><img src="./img/program_food.svg" alt="food"></div>
+            <h1>균형잡힌 식사가좋습니다.</h1>
+            <a href="#" class="btn-subArr">7월 식단프로그램 설정하기</a>
+            <p>변경하지 않으면 8월과 동일한 프로그램으로 자동 설정됩니다.</p>
+        </div>
+
+        <h1 class="emojiTit"><img src="./img/emoji_calendar.png" alt="cal">식사 밸런스가 좋았던 날</h1>
+        <div class="conWrap rankWrap">
+            <div class="item">
+                <div class="circle">
+                    <div class="rank">1</div>
+                    <div class="day">화요일</div>
+                </div>
+                <div class="count">10 식</div>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <div class="rank">2</div>
+                    <div class="day">수요일</div>
+                </div>
+                <div class="count">6 식</div>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <div class="rank">3</div>
+                    <div class="day">월요일</div>
+                </div>
+                <div class="count">4 식</div>
+            </div>
+        </div>
+
+        <h1 class="emojiTit"><img src="./img/emoji_rice.png" alt="rice">식사 밸런스가 좋은 끼니</h1>
+        <div class="conWrap rankWrap">
+            <div class="item">
+                <div class="circle">
+                    <div class="rank">1</div>
+                    <div class="day">아침</div>
+                </div>
+                <div class="count">44 식</div>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <div class="rank">2</div>
+                    <div class="day">저녁</div>
+                </div>
+                <div class="count">6 식</div>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <div class="rank">3</div>
+                    <div class="day">저녁</div>
+                </div>
+                <div class="count">4 식</div>
+            </div>
+        </div>
+
+        <h1 class="emojiTit"><img src="./img/emoji_boom.png" alt="boom">가장 큰 영양 변화</h1>
+        <div class="conWrap chart-rail">
+            <div class="name">탄수화물 섭취</div>
+            <div class="legend">(kg)</div>
+            <div class="value">10,000 증가</div>
+            <!-- 
+                ** chart-rail 가이드 **
+                
+                .rail에서 증가한 경우는 
+                .plus : 빨간색 바가 우측에 위치
+                .minus : 파란색 바가 좌측에 위치
+                
+                plus/minus 두가지 타입으로 증가/감소 정도만 위치로 표현
+            -->
+            <div class="rail plus">
+                <div class="standard badge">지난 달 15,000</div>
+                <div class="performance badge">이번 달 5,000</div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <div class="conWrap chart-rail">
+            <div class="name">단백질 섭취</div>
+            <div class="legend">(kg)</div>
+            <div class="value">8,000 감소</div>
+            <!-- 
+                ** chart-rail 가이드 **
+
+                .rail에서 증가한 경우는 
+                .plus : 빨간색 바가 우측에 위치
+                .minus : 파란색 바가 좌측에 위치
+                
+                plus/minus 두가지 타입으로 증가/감소 정도만 위치로 표현
+            -->
+            <div class="rail minus">
+                <div class="standard badge">지난 달 10,000</div>
+                <div class="performance badge">이번 달 2,000</div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+
+        <h1 class="emojiTit"><img src="./img/emoji_pig.png" alt="pig">가장 많이 먹은 날</h1>
+        <div class="rowBetween">
+            <div class="key">07월 12일</div>
+            <div class="value">3,042 kcal</div>
+        </div>
+
+        <h1 class="emojiTit"><img src="./img/emoji_rabbit.png" alt="rabbit">가장 적게 먹은 날</h1>
+        <div class="rowBetween">
+            <div class="key">06월 15일</div>
+            <div class="value">1,542 kcal</div>
+        </div>
+
+
+        <div class="conWrap" style="margin-top: 40px;">
             <h1>
                 대사증후군 예방 영양제는 어떨까요? 💊
             </h1>
@@ -278,6 +363,8 @@
         <!-- component : frame_footer -->
         <div data-include-path="./component/frame_footer.html"></div>
 
+
+        <!-- 무료 회원에게만 노출 -->
         <div class="conWrap fixed">
             <!-- component : frame_mainBtn -->
             <div class="frame_mainBtn">
