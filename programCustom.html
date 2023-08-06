@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌레터생활건강</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap">
+        <!-- component : frame_topNavSub -->
+        <div class="frame_topNavSub">
+            <button class="close"></button>
+            <div class="tit">맞춤 건강 식단</div>
+        </div>
+
+
+        <div class="programVisual detail">
+            <button class="guideIcon" onclick="openGuide()">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14.5" stroke="#ffffff" stroke-width="3"/>
+                    <rect x="14.5" y="9" width="3" height="3" rx="1.5" fill="#ffffff"/>
+                    <rect x="14.5" y="14" width="3" height="9" rx="1.5" fill="#ffffff"/>
+                </svg>
+            </button>
+                
+            <h1 style="margin-bottom: 22px;">
+                홍길동님에게 딱 맞춘<br>
+                건강 식단 입니다
+            </h1>
+            <div class="feature">
+                <div class="item">
+                    <div class="circle">
+                        <img src="./img/ic_thumb_kcal.svg" alt="kcal">
+                    </div>
+                    <span>낮은 칼로리</span>
+                </div>
+                <div class="item">
+                    <div class="circle">
+                        <img src="./img/ic_thumb_valance.svg" alt="valance">
+                    </div>
+                    <span>영양 균형</span>
+                </div>
+                <div class="item">
+                    <div class="circle">
+                        30일
+                    </div>
+                    <span>식단 기간</span>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class="h1">맞춤 식단</h1>
+        <div class="mealPlanTab">
+            <div class="scrollWrap">
+                <div class="item ac">1주차</div>
+                <div class="item">2주차</div>
+            </div>
+        </div>
+        <ul class="mealPlan tabContents ac">
+            <li class="item">
+                <div class="day">1일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="day">2일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="day">3일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="day">4일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="day">5일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="day">6일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="day">7일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="mealPlan tabContents">
+            <li class="item">
+                <div class="day">8일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="day">9일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="day">10일차</div>
+                <div>
+                    <div class="kcal">800 kcal</div>
+                    <div class="menu">게살국, 다시마 뭇국, 제육볶음, 해물냉채, 컬리플라워 볶음, 마늘쫑 무침, 깻잎나물 볶음</div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 탭 스크립트 -->
+        <script>
+            const tabs = document.querySelectorAll('.mealPlanTab .item')
+            const contents = document.querySelectorAll('.tabContents')
+            console.log(tabs, contents)
+
+            // 탭 컨텐츠 토글
+            for(let i = 0; i < tabs.length; i++) {
+                tabs[i].addEventListener('click', () => {
+                    tabs.forEach(e => {
+                        e.className= 'item'
+                    })
+                    contents.forEach(e => {
+                        e.className = 'mealPlan tabContents'
+                    })
+                    tabs[i].classList.add('ac')
+                    contents[i].classList.add('ac')
+                })
+            }
+        </script>
+        
+        
+        <!-- component : frame_footer -->
+        <div data-include-path="./component/frame_footer.html"></div>
+
+
+        <div class="conWrap fixed">
+            <!-- component : frame_mainBtn -->
+            <div class="frame_mainBtn">
+                <a href="#" class="btn-mainArr">
+                    이 식단 시작하기
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="frame_alert">
+        <div class="ev-modal ac" id="guide">
+            <div class="dim"></div>
+            <div class="card">
+                <div>
+                    <div class="tit">
+                        식단 구성 기준
+                    </div>
+                    <div class="desc">
+                        빌레터생활건강의 맞춤형 식단은 사용자의 나이, 키, 몸무게 등의 기본 정보와 건강검진 결과를 종합 분석한 내용을 바탕으로 구성됩니다.<br>
+                        만약, 건강검진 내용을 등록하지 않으셨다면 등록하고 더 정확한 식단을 받아보세요!
+                    </div>
+                </div>
+                <a href="#" class="frame_quickCard" style="width: 100%;">
+                    <div class="time">3분 소요</div>
+                    <div class="tit">
+                        건강검진정보<br>
+                        최신기록 업데이트
+                    </div>
+                    <div class="icon">
+                        <img src="./img//icon_58_heart.svg" alt="heart">
+                    </div>
+                </a>
+                <div class="btnWrap">
+                    <button class="btn btn-true" onclick="closeGuide()">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const guide = document.querySelector('#guide');
+        function openGuide() {
+            guide.classList.add('ac')
+        }
+        function closeGuide() {
+            guide.classList.remove('ac')
+        }
+    </script>
+    
+</body>
+</html>

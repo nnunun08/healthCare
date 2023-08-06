@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌레터생활건강</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap">
+        <!-- component : frame_topNavSub -->
+        <div class="frame_topNavSub">
+            <button class="close"></button>
+            <div class="tit">식단 기록</div>
+        </div>
+
+
+        <h2 class="h2" style="text-align: center; font-weight: bold;">
+            3월 18일 식단
+        </h2>
+        <div class="conWrap editMeal">
+            <div class="flexBx top">
+                <div>
+                    <span class="time">아침</span>
+                    <span class="kcal">541kcal</span>
+                </div>
+                <div>
+                    <button>메뉴 입력</button>
+                    <button>영양소 정보</button>
+                </div>
+            </div>
+            <ul class="body">
+                <li>
+                    <div class="type">밥</div>
+                    <label class="frame_inputCheck item">
+                        <input type="checkbox">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <div class="value">보리밥 작은공기 80g</div>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <div class="type">고기/단백질</div>
+                    <label class="frame_inputCheck item">
+                        <input type="checkbox">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <div class="value">냉이된장찌개 280g</div>
+                        </div>
+                    </label>
+                    <label class="frame_inputCheck item">
+                        <input type="checkbox">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <div class="value">갓김치 32g</div>
+                        </div>
+                    </label>
+
+                </li>
+                <li>
+                    <div class="type">반찬</div>
+                    <label class="frame_inputCheck item">
+                        <input type="checkbox">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <div class="value">닭고추장조림 200g</div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+            <div class="bottom">
+                <button class="up">up</button>
+                <button class="down">down</button>
+                <button class="delete">delete</button>
+            </div>
+        </div>
+        <div class="conWrap editMeal">
+            <div class="flexBx top">
+                <div>
+                    <span class="time">점심</span>
+                    <span class="kcal">541kcal</span>
+                </div>
+                <div>
+                    <button>메뉴 입력</button>
+                    <button>영양소 정보</button>
+                </div>
+            </div>
+            <ul class="body">
+                <li>
+                    <div class="type">밥</div>
+                    <label class="frame_inputCheck item">
+                        <input type="checkbox">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <div class="value">보리밥 작은공기 80g</div>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <div class="type">고기/단백질</div>
+                    <label class="frame_inputCheck item">
+                        <input type="checkbox">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <div class="value">냉이된장찌개 280g</div>
+                        </div>
+                    </label>
+                    <label class="frame_inputCheck item">
+                        <input type="checkbox">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <div class="value">갓김치 32g</div>
+                        </div>
+                    </label>
+                    <label class="frame_inputCheck item">
+                        <input type="checkbox">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <div class="value">삼겹살 132g</div>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <div class="type">반찬</div>
+                    <label class="frame_inputCheck item">
+                        <input type="checkbox">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <div class="value">닭고추장조림 200g</div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+            <div class="bottom">
+                <button class="up">up</button>
+                <button class="down">down</button>
+                <button class="delete">delete</button>
+            </div>
+        </div>
+        <div class="conWrap editMeal">
+            <div class="flexBx top">
+                <div>
+                    <span class="time">저녁</span>
+                    <span class="kcal">0kcal</span>
+                </div>
+                <div>
+                    <button>메뉴 입력</button>
+                    <button>영양소 정보</button>
+                </div>
+            </div>
+            <ul class="body">
+            </ul>
+            <div class="bottom">
+                <button class="up">up</button>
+                <button class="down">down</button>
+                <button class="delete">delete</button>
+            </div>
+        </div>
+
+        
+
+        
+
+
+        <div class="conWrap conWrap-transparent" style="margin-top:54px;">
+            <!-- component : frame_mainBtn -->
+            <div class="frame_mainBtn">
+                <a href="#" class="btn-mainArr">
+                    식단 홈 가기
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="frame_confirm">
+        <!-- 모달 활성화시 ev-modal 에 .ac 추가 -->
+        <div class="ev-modal" id="deleteModal">
+            <div class="dim"></div>
+            <div class="card">
+                <div>
+                    <div class="tit">아침식사를 삭제하시겠습니까?</div>
+                </div>
+                <div class="btnWrap">
+                    <button class="btn btn-false" onclick="modalClose()">취소</button>
+                    <button class="btn btn-true">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="frame_form2">
+        <!-- 모달 활성화시 ev-modal 에 .ac 추가 -->
+        <div class="ev-modal" id="editModal">
+            <div class="dim"></div>
+            <form class="card">
+                <div>
+                    <div class="tit">영양소직접 수정하기</div>
+                    <div class="sub-tit">영양소 정보를 입력하세요.</div>
+                </div>
+    
+                <div class="formWrap">
+                    <!-- conponent : inputBx -->
+                    <div class="inputBx">
+                        <label for="" class="label">
+                            총 섭취량(g)
+                        </label>
+                        <input type="text" placeholder="데이터를 입력하세요">
+                    </div>
+
+                    <div class="inputBx">
+                        <label for="" class="label">
+                            탄수화물(g)
+                        </label>
+                        <input type="text" placeholder="데이터를 입력하세요">
+                        <div class="calWrap">
+                            <button type="button" class="cal">+5</button>
+                            <button type="button" class="cal">+50</button>
+                            <button type="button" class="cal">+100</button>
+                        </div>
+                    </div>
+
+                    <div class="inputBx">
+                        <label for="" class="label">
+                            유형
+                        </label>
+                        <select>
+                            <option value="">선택
+                            </option><option value="10">밥류
+                            </option><option value="20">국/탕류
+                            </option><option value="30">고기(단백질)류
+                            </option><option value="40">반찬류
+                          </option></select>
+                    </div>
+                    
+                </div>
+    
+                <div class="btnWrap">
+                    <button class="btn btn-false">취소</button>
+                    <button class="btn btn-true">종료</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+
+        // 삭제 modal 호출
+        const deleteModal = document.querySelector('#deleteModal');
+        document.querySelectorAll('.delete').forEach(e => {
+            e.addEventListener('click', () => {
+                deleteModal.classList.add('ac')
+            })
+        })
+        function modalClose() {
+            deleteModal.classList.remove('ac')
+        }
+
+        // 메뉴 편집 modal 호출
+        const editBtn = document.querySelectorAll('.editMeal .top button')
+        const editModal = document.querySelector('#editModal')
+        const editModalClose = document.querySelectorAll('#editModal .btn')
+        console.log(editModalClose)
+        
+        editBtn.forEach(e => {
+            e.addEventListener('click', () => {
+                editModal.classList.add('ac')
+            })
+        })
+
+        editModalClose.forEach(e => {
+            e.addEventListener('click', () => {
+                editModal.classList.remove('ac')
+            })
+        })
+
+
+
+    </script>
+
+
+    
+</body>
+</html>

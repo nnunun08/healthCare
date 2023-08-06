@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
 :root {
   --primary: #FF7272;
@@ -196,6 +197,15 @@ button {
   background: rgba(237, 237, 237, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+.conWrap.checkList {
+  border-radius: 8px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.conWrap.checkList li {
+  margin: 4px 0;
 }
 
 .frame_topNav {
@@ -465,6 +475,17 @@ button {
   background: url(../img/banner_sub_arr.svg) center/cover no-repeat;
 }
 
+.btn-sub {
+  padding: 10px;
+  min-width: 64px;
+  color: var(--primary);
+  background-color: rgba(255, 144, 144, 0.2);
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-align: center;
+}
+
 .btn-subArr,
 .btn-mainArr {
   font-size: 16px;
@@ -519,6 +540,9 @@ button {
   text-decoration: underline;
   font-size: 16px;
   margin-top: 7px;
+}
+.frame_mainBtn button.btn-mainArr::after {
+  display: none;
 }
 
 .frame_footer {
@@ -611,6 +635,7 @@ button {
   color: #000;
 }
 
+.frame_form2 .ev-modal,
 .frame_form .ev-modal,
 .frame_confirm .ev-modal,
 .frame_alert .ev-modal {
@@ -628,11 +653,13 @@ button {
   align-items: center;
   box-sizing: border-box;
 }
+.frame_form2 .ev-modal.ac,
 .frame_form .ev-modal.ac,
 .frame_confirm .ev-modal.ac,
 .frame_alert .ev-modal.ac {
   display: flex;
 }
+.frame_form2 .ev-modal .dim,
 .frame_form .ev-modal .dim,
 .frame_confirm .ev-modal .dim,
 .frame_alert .ev-modal .dim {
@@ -646,6 +673,7 @@ button {
   bottom: 0;
   z-index: -1;
 }
+.frame_form2 .ev-modal .card,
 .frame_form .ev-modal .card,
 .frame_confirm .ev-modal .card,
 .frame_alert .ev-modal .card {
@@ -658,25 +686,31 @@ button {
   gap: 30px;
   width: 100%;
   max-width: 540px;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
+.frame_form2 .ev-modal .card .tit,
 .frame_form .ev-modal .card .tit,
 .frame_confirm .ev-modal .card .tit,
 .frame_alert .ev-modal .card .tit {
   font-size: 18px;
   font-weight: 700;
 }
+.frame_form2 .ev-modal .card .desc,
 .frame_form .ev-modal .card .desc,
 .frame_confirm .ev-modal .card .desc,
 .frame_alert .ev-modal .card .desc {
   font-size: 14px;
   margin-top: 17px;
 }
+.frame_form2 .ev-modal .card .btnWrap,
 .frame_form .ev-modal .card .btnWrap,
 .frame_confirm .ev-modal .card .btnWrap,
 .frame_alert .ev-modal .card .btnWrap {
   display: flex;
   gap: 10px;
 }
+.frame_form2 .ev-modal .card .btnWrap .btn,
 .frame_form .ev-modal .card .btnWrap .btn,
 .frame_confirm .ev-modal .card .btnWrap .btn,
 .frame_alert .ev-modal .card .btnWrap .btn {
@@ -691,12 +725,14 @@ button {
   font-weight: 700;
   border-radius: 4px;
 }
+.frame_form2 .ev-modal .card .btnWrap .btn.btn-true,
 .frame_form .ev-modal .card .btnWrap .btn.btn-true,
 .frame_confirm .ev-modal .card .btnWrap .btn.btn-true,
 .frame_alert .ev-modal .card .btnWrap .btn.btn-true {
   color: #fff;
   background-color: var(--primary);
 }
+.frame_form2 .ev-modal .card .btnWrap .btn.btn-false,
 .frame_form .ev-modal .card .btnWrap .btn.btn-false,
 .frame_confirm .ev-modal .card .btnWrap .btn.btn-false,
 .frame_alert .ev-modal .card .btnWrap .btn.btn-false {
@@ -704,21 +740,25 @@ button {
   background-color: #e6e6e6;
 }
 
+.frame_form2 .date,
 .frame_form .date {
   font-size: 14px;
   color: var(--primary);
   margin-bottom: 4px;
 }
+.frame_form2 .formWrap,
 .frame_form .formWrap {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+.frame_form2 .inputBx,
 .frame_form .inputBx {
   width: 100%;
   height: 52px;
   position: relative;
 }
+.frame_form2 .inputBx .label,
 .frame_form .inputBx .label {
   position: absolute;
   top: 50%;
@@ -728,6 +768,9 @@ button {
   font-size: 14px;
   font-weight: 500;
 }
+.frame_form2 .inputBx select,
+.frame_form2 .inputBx input,
+.frame_form .inputBx select,
 .frame_form .inputBx input {
   width: 100%;
   height: 100%;
@@ -740,12 +783,98 @@ button {
   border: 1px solid #ddd;
   text-align: right;
 }
+.frame_form2 .inputBx select::placeholder,
+.frame_form2 .inputBx input::placeholder,
+.frame_form .inputBx select::placeholder,
 .frame_form .inputBx input::placeholder {
   color: #aaa;
   font-weight: 400;
 }
+.frame_form2 .inputBx select:focus,
+.frame_form2 .inputBx input:focus,
+.frame_form .inputBx select:focus,
 .frame_form .inputBx input:focus {
   outline: 1px solid var(--primary);
+}
+.frame_form2 .inputBx select,
+.frame_form .inputBx select {
+  padding-right: 42px;
+  background: url(../img/select_arr.svg) right 10px center no-repeat;
+  /* 네이티브 외형 감추기 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.frame_form2 .inputBx:has(.calWrap),
+.frame_form .inputBx:has(.calWrap) {
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.frame_form2 .inputBx:has(.calWrap):focus-within,
+.frame_form .inputBx:has(.calWrap):focus-within {
+  outline: 1px solid var(--primary);
+}
+.frame_form2 .inputBx:has(.calWrap) .label,
+.frame_form .inputBx:has(.calWrap) .label {
+  top: 16px;
+  transform: none;
+}
+.frame_form2 .inputBx:has(.calWrap) input,
+.frame_form .inputBx:has(.calWrap) input {
+  border-bottom: 0;
+  height: 52px;
+  border: 0;
+  outline: none;
+}
+.frame_form2 .inputBx:has(.calWrap) .calWrap,
+.frame_form .inputBx:has(.calWrap) .calWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -1px;
+}
+.frame_form2 .inputBx:has(.calWrap) .calWrap .cal,
+.frame_form .inputBx:has(.calWrap) .calWrap .cal {
+  flex: 1 0 0;
+  height: 48px;
+  border: 0;
+  background-color: #F3F4F4;
+  font-size: 16px;
+  color: #000;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.frame_form2 .inputBx:has(.calWrap) .calWrap .cal:last-child,
+.frame_form .inputBx:has(.calWrap) .calWrap .cal:last-child {
+  border-radius: 0;
+  border-right: 0;
+}
+
+.frame_form2 .ev-modal {
+  padding: 0;
+  align-items: flex-end;
+}
+.frame_form2 .ev-modal .card {
+  height: 80vh;
+  padding: 20px 15px 72px;
+  max-width: 600px;
+}
+.frame_form2 .ev-modal .card .sub-tit {
+  font-size: 14px;
+  color: var(--primary);
+}
+.frame_form2 .ev-modal .card .btnWrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .frame_topNavSub {
@@ -876,8 +1005,10 @@ button {
   width: 24px;
   height: 24px;
   margin: 0;
-  background: url(../img/checkbox_off.svg) center/cover no-repeat;
   margin-right: 8px;
+  border-radius: 4px;
+  border: 1px solid #DCDCDC;
+  box-sizing: border-box;
 }
 .frame_inputCheck .req {
   width: 6px;
@@ -889,7 +1020,8 @@ button {
   display: none;
 }
 .frame_inputCheck input:checked + .inputStyle .checkboxImg {
-  background-image: url(../img/checkbox_on.svg);
+  background: var(--primary) url(../img/checkbox_on.svg) center/cover no-repeat;
+  border: 0;
 }
 .frame_inputCheck input:required + .inputStyle .req {
   display: block;
@@ -2829,6 +2961,11 @@ button {
 .programVisual.detail h1 {
   margin-bottom: 44px;
 }
+.programVisual.detail .guideIcon {
+  border: 0;
+  background-color: transparent;
+  padding: 13px;
+}
 
 .inner {
   padding: 0 16px;
@@ -2846,6 +2983,7 @@ button {
   padding: 10px 26px;
 }
 
+.frame_rowAnchor3,
 .frame_rowAnchor2 {
   display: block;
   position: relative;
@@ -2854,9 +2992,13 @@ button {
   padding: 20px 16px;
   box-sizing: border-box;
 }
+.frame_rowAnchor3 + .frame_rowAnchor3,
+.frame_rowAnchor3 + .frame_rowAnchor2,
+.frame_rowAnchor2 + .frame_rowAnchor3,
 .frame_rowAnchor2 + .frame_rowAnchor2 {
   margin-top: 10px;
 }
+.frame_rowAnchor3::after,
 .frame_rowAnchor2::after {
   content: "";
   position: absolute;
@@ -2867,14 +3009,26 @@ button {
   width: 24px;
   height: 24px;
 }
+.frame_rowAnchor3 .type,
 .frame_rowAnchor2 .type {
   color: #717171;
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 6px;
 }
+.frame_rowAnchor3 .name,
 .frame_rowAnchor2 .name {
   font-weight: 700;
+}
+
+.frame_rowAnchor3::after {
+  display: none;
+}
+.frame_rowAnchor3 .detailView {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .mealPlan .item {
@@ -2887,6 +3041,7 @@ button {
   margin-top: 5px;
 }
 .mealPlan .item .day {
+  font-weight: 700;
   flex: 0 0 80px;
 }
 .mealPlan .item .kcal {
@@ -2898,4 +3053,184 @@ button {
   font-size: 14px;
   color: #717171;
   line-height: 1.62;
+}
+.mealPlan.tabContents {
+  display: none;
+}
+.mealPlan.tabContents.ac {
+  display: block;
+}
+
+.mealPlanTab {
+  width: 100%;
+  overflow: hidden;
+}
+.mealPlanTab .scrollWrap {
+  white-space: nowrap;
+  overflow: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #ddd;
+}
+.mealPlanTab .item {
+  cursor: pointer;
+  flex: 0 0 auto;
+  margin: 0;
+  width: 93px;
+  height: 51px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #717171;
+  border-bottom: 1px solid transparent;
+}
+.mealPlanTab .item.ac {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.pageTit {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 0 16px;
+}
+
+.blackCard {
+  border-radius: 8px;
+  background-color: #333;
+  padding: 20px;
+  margin-top: 10px;
+}
+.blackCard .flexBx {
+  justify-content: space-between;
+  align-items: center;
+}
+.blackCard .flexBx + .flexBx {
+  margin-top: 13px;
+}
+.blackCard .label {
+  font-size: 14px;
+  color: #fff;
+}
+.blackCard .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.blackCard .value.red {
+  color: var(--red);
+}
+
+.whiteList {
+  background-color: #fff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.whiteList .item {
+  padding: 12px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.whiteList .item .label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.whiteList .item .label .tit {
+  font-weight: 700;
+}
+.whiteList .item .label .desc {
+  font-size: 14px;
+  color: var(--primary);
+}
+.editMeal {
+  padding-bottom: 0;
+  margin: 10px 0;
+}
+.editMeal .flexBx {
+  justify-content: space-between;
+  align-items: center;
+}
+.editMeal .top .time {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.editMeal .top .kcal {
+  color: var(--primary);
+}
+.editMeal .top button {
+  font-size: 12px;
+  padding: 10px;
+  border: 0;
+  background-color: #F1F4F8;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+.editMeal .body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 21px 0 23px;
+  word-break: break-all;
+}
+.editMeal .body li {
+  position: relative;
+  font-size: 14px;
+  color: #717171;
+  padding-left: 90px;
+  min-height: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.editMeal .body li .type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  font-weight: 700;
+  padding: 3px 0;
+}
+.editMeal .body li .item {
+  position: relative;
+  width: 100%;
+}
+.editMeal .body li .value {
+  padding: 3px 0;
+}
+.editMeal .body li .checkboxImg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+}
+.editMeal .bottom {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+.editMeal .bottom button {
+  height: 42px;
+  flex: 1 0 0;
+  border: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.editMeal .bottom button.up {
+  background: #fff url(../img/edit_arr.svg) center no-repeat;
+}
+.editMeal .bottom button.down {
+  background: #fff url(../img/edit_arr.svg) center no-repeat;
+  transform: rotate(180deg);
+}
+.editMeal .bottom button.delete {
+  background: #fff url(../img/edit_delete.svg) center no-repeat;
 }/*# sourceMappingURL=main.css.map */
