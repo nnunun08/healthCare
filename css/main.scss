@@ -3160,3 +3160,250 @@ button {
         }
     }
 }
+
+
+
+/* 식단 계획 diet_record_00 */
+.diet_record_wrap {
+    .default_meal {
+      padding: 1.375em;
+      div.tit {
+        font-size: 0.875em;
+        font-weight: bold;
+      }
+      ul {
+        margin-top: 0.9375em;
+      }
+      li {
+        position: relative;
+        height: 79px;
+        border-radius: 0.875em;
+        overflow: hidden;
+      }
+      li + li {
+        margin-top: 1.0625em;
+      }
+      li input {
+        opacity: 0;
+      }
+      li label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+      li input + label {
+        display: flex;
+        align-items: center;
+        padding: 0 21px;
+        background-color: #fff;
+      }
+      li input + label span.checkmark {
+        display: inline-block;
+        position: relative;
+        width: 39px;
+        height: 39px;
+        background-color: #e8e8e8;
+        border-radius: 100%;
+      }
+      li input + label span.checkmark::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        width: 40%;
+        height: 25%;
+        border-width: 0 0 3px 3px;
+        border-style: solid;
+        border-color: #fff;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      li input + label span.txt {
+        margin-left: 0.4em;
+        color: #838383;
+        font-size: 1.3125em;
+        font-weight: bold;
+      }
+      li input:checked + label {
+        background-color: #3180ed;
+      }
+      li input:checked + label span.checkmark {
+        background-color: #fff;
+      }
+      li input:checked + label span.checkmark::before {
+        border-color: #3180ed;
+      }
+      li input:checked + label span.txt {
+        color: #fff;
+      }
+    }
+  }
+  
+  /* 달 선택 */
+  .calender_header {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 6px;
+    background-color: #fff;
+    text-align: center;
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    > div h2 {
+        width: 120px;
+        font-size: 20px;
+        line-height: 19px;
+        white-space: nowrap;
+    }
+    > div button {
+      position: relative;
+      width: 36px;
+      height: 36px;
+      background: url(../img/cal_month_arr.svg) center no-repeat;
+      border: 0;
+      border-radius: 100%;
+      overflow: hidden;
+      cursor: pointer;
+      color: transparent;
+    }
+    > div button.next {
+        transform: rotate(180deg);
+    }
+    // > div button::before {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   top: 50%;
+    //   width: 40%;
+    //   height: 40%;
+    //   border-color: #3180ed;
+    // }
+    // > div button.prev::before {
+    //   left: 50%;
+    //   border-width: 1.5px 0 0 1.5px;
+    //   border-style: solid;
+    //   transform: translateX(-40%) rotate(-45deg);
+    //   transform-origin: 0 0;
+    // }
+    // > div button.next::before {
+    //   right: 50%;
+    //   border-width: 1.5px 1.5px 0 0;
+    //   border-style: solid;
+    //   transform: translateX(40%) rotate(45deg);
+    //   transform-origin: 100% 0;
+    // }
+    button.btnToday {
+      position: absolute;
+      top: 50%;
+      right: 1em;
+      color: var(--primary);
+      font-size: 16px;
+      border: 0;
+      background-color: transparent;
+      transform: translateY(-50%);
+    }
+  }
+  
+  /* 식단 기록 달력 */
+  .calender_month {
+    padding: 0 1.125em;
+    background-color: #fff;
+  }
+  .calender_week {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .calender_week span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: calc(100% / 7);
+    height: 48px;
+    text-align: center;
+    color: #444;
+    font-size: 15px;
+    padding-bottom: 6px;
+  }
+  
+  .canelder_day {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 15px;
+    padding: 1.0625em 0;
+    border-top: 1px solid #d9d9d9;
+    div {
+      position: relative;
+      width: calc(100% / 7);
+      text-align: center;
+    }
+    div span.day {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      margin: 0 auto;
+      border-radius: 100%;
+      color: #000;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    div.today span.txt {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      color: #3180ed;
+      font-size: 11px;
+      line-height: 15px;
+      font-weight: bold;
+      transform: translateX(-50%) translateY(-15px);
+      white-space: nowrap;
+    }
+    div.today span.day {
+      background-color: #e1ebf9;
+      color: #3180ed;
+    }
+    div.active span.day {
+      background-color: #3180ed !important;
+      color: #fff;
+      font-size: 12px;
+    }
+    div.dim span.day {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  
+    /* 기록된 */
+    div.recorded span.day {
+      background-color: #ededed;
+    }
+  }
+  
+  /* 선택한날 */
+  .selected_day {
+    padding: 1.125em 1.125em 1em;
+    background-color: #fff;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #49758b;
+  }
+  .selected_day p {
+    font-size: 1.75em;
+    line-height: 1.17857em;
+    font-weight: bold;
+  }
+  .selected_day span {
+    display: block;
+    font-size: 1.125em;
+    line-height: 1.21428em;
+    opacity: 0.7;
+  }
+  
+

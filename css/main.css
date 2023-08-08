@@ -783,6 +783,10 @@ button {
   border: 1px solid #ddd;
   text-align: right;
 }
+.frame_form2 .inputBx select::-moz-placeholder, .frame_form2 .inputBx input::-moz-placeholder, .frame_form .inputBx select::-moz-placeholder, .frame_form .inputBx input::-moz-placeholder {
+  color: #aaa;
+  font-weight: 400;
+}
 .frame_form2 .inputBx select::placeholder,
 .frame_form2 .inputBx input::placeholder,
 .frame_form .inputBx select::placeholder,
@@ -956,7 +960,8 @@ button {
 .landingWrap .visual img {
   width: 100%;
   height: 391px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .landingWrap .visual .tit {
   position: absolute;
@@ -1230,7 +1235,8 @@ button {
 .frame_quickCard .icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .quickCardWrap {
@@ -1352,7 +1358,8 @@ button {
 .storeItem .imgWrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .storeItem .textWrap {
   display: flex;
@@ -1413,7 +1420,8 @@ button {
 .frame_newsItem .imgWrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .frame_newsItem .imgWrap {
   width: 100%;
@@ -3233,4 +3241,225 @@ button {
 }
 .editMeal .bottom button.delete {
   background: #fff url(../img/edit_delete.svg) center no-repeat;
+}
+
+/* 식단 계획 diet_record_00 */
+.diet_record_wrap .default_meal {
+  padding: 1.375em;
+}
+.diet_record_wrap .default_meal div.tit {
+  font-size: 0.875em;
+  font-weight: bold;
+}
+.diet_record_wrap .default_meal ul {
+  margin-top: 0.9375em;
+}
+.diet_record_wrap .default_meal li {
+  position: relative;
+  height: 79px;
+  border-radius: 0.875em;
+  overflow: hidden;
+}
+.diet_record_wrap .default_meal li + li {
+  margin-top: 1.0625em;
+}
+.diet_record_wrap .default_meal li input {
+  opacity: 0;
+}
+.diet_record_wrap .default_meal li label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.diet_record_wrap .default_meal li input + label {
+  display: flex;
+  align-items: center;
+  padding: 0 21px;
+  background-color: #fff;
+}
+.diet_record_wrap .default_meal li input + label span.checkmark {
+  display: inline-block;
+  position: relative;
+  width: 39px;
+  height: 39px;
+  background-color: #e8e8e8;
+  border-radius: 100%;
+}
+.diet_record_wrap .default_meal li input + label span.checkmark::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  width: 40%;
+  height: 25%;
+  border-width: 0 0 3px 3px;
+  border-style: solid;
+  border-color: #fff;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.diet_record_wrap .default_meal li input + label span.txt {
+  margin-left: 0.4em;
+  color: #838383;
+  font-size: 1.3125em;
+  font-weight: bold;
+}
+.diet_record_wrap .default_meal li input:checked + label {
+  background-color: #3180ed;
+}
+.diet_record_wrap .default_meal li input:checked + label span.checkmark {
+  background-color: #fff;
+}
+.diet_record_wrap .default_meal li input:checked + label span.checkmark::before {
+  border-color: #3180ed;
+}
+.diet_record_wrap .default_meal li input:checked + label span.txt {
+  color: #fff;
+}
+
+/* 달 선택 */
+.calender_header {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 6px;
+  background-color: #fff;
+  text-align: center;
+}
+.calender_header > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calender_header > div h2 {
+  width: 120px;
+  font-size: 20px;
+  line-height: 19px;
+  white-space: nowrap;
+}
+.calender_header > div button {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: url(../img/cal_month_arr.svg) center no-repeat;
+  border: 0;
+  border-radius: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  color: transparent;
+}
+.calender_header > div button.next {
+  transform: rotate(180deg);
+}
+.calender_header button.btnToday {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  color: var(--primary);
+  font-size: 16px;
+  border: 0;
+  background-color: transparent;
+  transform: translateY(-50%);
+}
+
+/* 식단 기록 달력 */
+.calender_month {
+  padding: 0 1.125em;
+  background-color: #fff;
+}
+
+.calender_week {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.calender_week span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 14.2857142857%;
+  height: 48px;
+  text-align: center;
+  color: #444;
+  font-size: 15px;
+  padding-bottom: 6px;
+}
+
+.canelder_day {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 15px;
+  padding: 1.0625em 0;
+  border-top: 1px solid #d9d9d9;
+  /* 기록된 */
+}
+.canelder_day div {
+  position: relative;
+  width: 14.2857142857%;
+  text-align: center;
+}
+.canelder_day div span.day {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  border-radius: 100%;
+  color: #000;
+  font-size: 12px;
+  cursor: pointer;
+}
+.canelder_day div.today span.txt {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: #3180ed;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: bold;
+  transform: translateX(-50%) translateY(-15px);
+  white-space: nowrap;
+}
+.canelder_day div.today span.day {
+  background-color: #e1ebf9;
+  color: #3180ed;
+}
+.canelder_day div.active span.day {
+  background-color: #3180ed !important;
+  color: #fff;
+  font-size: 12px;
+}
+.canelder_day div.dim span.day {
+  color: rgba(0, 0, 0, 0.3);
+}
+.canelder_day div.recorded span.day {
+  background-color: #ededed;
+}
+
+/* 선택한날 */
+.selected_day {
+  padding: 1.125em 1.125em 1em;
+  background-color: #fff;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #49758b;
+}
+
+.selected_day p {
+  font-size: 1.75em;
+  line-height: 1.17857em;
+  font-weight: bold;
+}
+
+.selected_day span {
+  display: block;
+  font-size: 1.125em;
+  line-height: 1.21428em;
+  opacity: 0.7;
 }/*# sourceMappingURL=main.css.map */
