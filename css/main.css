@@ -75,6 +75,10 @@ button {
 .graph-progress .item .text .per {
   font-weight: 700;
 }
+.graph-progress .item .text .per em {
+  color: #717171;
+  font-weight: 400;
+}
 .graph-progress .item .progress {
   margin-top: 8px;
   height: 5px;
@@ -197,6 +201,7 @@ button {
   background: rgba(237, 237, 237, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-sizing: border-box;
 }
 .conWrap.checkList {
   border-radius: 8px;
@@ -635,6 +640,7 @@ button {
   color: #000;
 }
 
+.frame_guidePop .ev-modal,
 .frame_form2 .ev-modal,
 .frame_form .ev-modal,
 .frame_confirm .ev-modal,
@@ -653,12 +659,14 @@ button {
   align-items: center;
   box-sizing: border-box;
 }
+.frame_guidePop .ev-modal.ac,
 .frame_form2 .ev-modal.ac,
 .frame_form .ev-modal.ac,
 .frame_confirm .ev-modal.ac,
 .frame_alert .ev-modal.ac {
   display: flex;
 }
+.frame_guidePop .ev-modal .dim,
 .frame_form2 .ev-modal .dim,
 .frame_form .ev-modal .dim,
 .frame_confirm .ev-modal .dim,
@@ -673,6 +681,7 @@ button {
   bottom: 0;
   z-index: -1;
 }
+.frame_guidePop .ev-modal .card,
 .frame_form2 .ev-modal .card,
 .frame_form .ev-modal .card,
 .frame_confirm .ev-modal .card,
@@ -689,6 +698,7 @@ button {
   overflow-y: auto;
   box-sizing: border-box;
 }
+.frame_guidePop .ev-modal .card .tit,
 .frame_form2 .ev-modal .card .tit,
 .frame_form .ev-modal .card .tit,
 .frame_confirm .ev-modal .card .tit,
@@ -696,6 +706,7 @@ button {
   font-size: 18px;
   font-weight: 700;
 }
+.frame_guidePop .ev-modal .card .desc,
 .frame_form2 .ev-modal .card .desc,
 .frame_form .ev-modal .card .desc,
 .frame_confirm .ev-modal .card .desc,
@@ -703,6 +714,7 @@ button {
   font-size: 14px;
   margin-top: 17px;
 }
+.frame_guidePop .ev-modal .card .btnWrap,
 .frame_form2 .ev-modal .card .btnWrap,
 .frame_form .ev-modal .card .btnWrap,
 .frame_confirm .ev-modal .card .btnWrap,
@@ -710,6 +722,7 @@ button {
   display: flex;
   gap: 10px;
 }
+.frame_guidePop .ev-modal .card .btnWrap .btn,
 .frame_form2 .ev-modal .card .btnWrap .btn,
 .frame_form .ev-modal .card .btnWrap .btn,
 .frame_confirm .ev-modal .card .btnWrap .btn,
@@ -725,6 +738,7 @@ button {
   font-weight: 700;
   border-radius: 4px;
 }
+.frame_guidePop .ev-modal .card .btnWrap .btn.btn-true,
 .frame_form2 .ev-modal .card .btnWrap .btn.btn-true,
 .frame_form .ev-modal .card .btnWrap .btn.btn-true,
 .frame_confirm .ev-modal .card .btnWrap .btn.btn-true,
@@ -732,6 +746,7 @@ button {
   color: #fff;
   background-color: var(--primary);
 }
+.frame_guidePop .ev-modal .card .btnWrap .btn.btn-false,
 .frame_form2 .ev-modal .card .btnWrap .btn.btn-false,
 .frame_form .ev-modal .card .btnWrap .btn.btn-false,
 .frame_confirm .ev-modal .card .btnWrap .btn.btn-false,
@@ -782,10 +797,6 @@ button {
   box-sizing: border-box;
   border: 1px solid #ddd;
   text-align: right;
-}
-.frame_form2 .inputBx select::-moz-placeholder, .frame_form2 .inputBx input::-moz-placeholder, .frame_form .inputBx select::-moz-placeholder, .frame_form .inputBx input::-moz-placeholder {
-  color: #aaa;
-  font-weight: 400;
 }
 .frame_form2 .inputBx select::placeholder,
 .frame_form2 .inputBx input::placeholder,
@@ -860,7 +871,7 @@ button {
   align-items: flex-end;
 }
 .frame_form2 .ev-modal .card {
-  height: 80vh;
+  height: 90vh;
   padding: 20px 15px 72px;
   max-width: 600px;
 }
@@ -879,6 +890,44 @@ button {
   background-color: #fff;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.frame_guidePop .ev-modal {
+  align-items: flex-end;
+  padding: 0;
+}
+.frame_guidePop .ev-modal .card {
+  padding: 20px 15px;
+  max-width: 600px;
+  height: 90vh;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 0;
+}
+.frame_guidePop .ev-modal .card .textWrap {
+  flex: 1 0 0;
+  height: 0;
+  overflow: auto;
+  padding-bottom: 40px;
+}
+.frame_guidePop .ev-modal .card .btnWrap {
+  flex: 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.frame_guidePop .ev-modal .card .btnWrap .btn-grey {
+  font-weight: 700;
+  height: 52px;
+  width: 100%;
+  background-color: #E6E6E6;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .frame_topNavSub {
@@ -960,8 +1009,7 @@ button {
 .landingWrap .visual img {
   width: 100%;
   height: 391px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .landingWrap .visual .tit {
   position: absolute;
@@ -1107,6 +1155,10 @@ button {
 .frame_foodPlan .graph-progress .item .text .per {
   font-weight: 700;
 }
+.frame_foodPlan .graph-progress .item .text .per em {
+  color: #717171;
+  font-weight: 400;
+}
 .frame_foodPlan .graph-progress .item .progress {
   margin-top: 8px;
   height: 5px;
@@ -1235,8 +1287,7 @@ button {
 .frame_quickCard .icon img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .quickCardWrap {
@@ -1358,8 +1409,7 @@ button {
 .storeItem .imgWrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .storeItem .textWrap {
   display: flex;
@@ -1420,8 +1470,7 @@ button {
 .frame_newsItem .imgWrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .frame_newsItem .imgWrap {
   width: 100%;
@@ -1940,7 +1989,7 @@ button {
 }
 .chart-bar .item .bar {
   width: 30px;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   min-height: 6px;
   background-color: var(--lightGrey2);
   flex: 0 0 auto;
@@ -2096,6 +2145,10 @@ button {
 .meal .graph-progress .item .text .per {
   font-weight: 700;
 }
+.meal .graph-progress .item .text .per em {
+  color: #717171;
+  font-weight: 400;
+}
 .meal .graph-progress .item .progress {
   margin-top: 8px;
   height: 5px;
@@ -2121,6 +2174,10 @@ button {
 }
 .conWrapDonut .graph-progress .item .text .per {
   font-weight: 700;
+}
+.conWrapDonut .graph-progress .item .text .per em {
+  color: #717171;
+  font-weight: 400;
 }
 .conWrapDonut .graph-progress .item .progress {
   margin-top: 8px;
@@ -2185,6 +2242,10 @@ button {
 }
 .refType .graph-progress .item .text .per {
   font-weight: 700;
+}
+.refType .graph-progress .item .text .per em {
+  color: #717171;
+  font-weight: 400;
 }
 .refType .graph-progress .item .progress {
   margin-top: 8px;
@@ -3097,6 +3158,12 @@ button {
   color: #000;
   border-bottom: 1px solid #000;
 }
+.mealPlanTab.fullTab .scrollWrap {
+  overflow: hidden;
+}
+.mealPlanTab.fullTab .item {
+  flex: 1 0 0;
+}
 
 .pageTit {
   margin-top: 40px;
@@ -3244,6 +3311,9 @@ button {
 }
 
 /* 식단 계획 diet_record_00 */
+.diet_record_wrap {
+  margin-bottom: 10px;
+}
 .diet_record_wrap .default_meal {
   padding: 1.375em;
 }
@@ -3355,13 +3425,13 @@ button {
 }
 .calender_header button.btnToday {
   position: absolute;
-  top: 50%;
-  right: 1em;
+  top: 28px;
+  right: 22px;
   color: var(--primary);
   font-size: 16px;
+  font-weight: 700;
   border: 0;
   background-color: transparent;
-  transform: translateY(-50%);
 }
 
 /* 식단 기록 달력 */
@@ -3393,8 +3463,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  row-gap: 15px;
-  padding: 1.0625em 0;
+  row-gap: 6px;
+  padding: 6px 0 20px;
   border-top: 1px solid #d9d9d9;
   /* 기록된 */
 }
@@ -3407,19 +3477,18 @@ button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
+  width: 46px;
+  height: 42px;
   margin: 0 auto;
-  border-radius: 100%;
   color: #000;
-  font-size: 12px;
+  font-size: 15px;
   cursor: pointer;
 }
 .canelder_day div.today span.txt {
   position: absolute;
   top: 0;
   left: 50%;
-  color: #3180ed;
+  color: #A7A7A7;
   font-size: 11px;
   line-height: 15px;
   font-weight: bold;
@@ -3427,16 +3496,16 @@ button {
   white-space: nowrap;
 }
 .canelder_day div.today span.day {
-  background-color: #e1ebf9;
-  color: #3180ed;
+  background-color: rgba(255, 114, 114, 0.2);
+  background-color: #f6f7f8;
 }
 .canelder_day div.active span.day {
-  background-color: #3180ed !important;
+  background-color: var(--primary) !important;
   color: #fff;
   font-size: 12px;
 }
 .canelder_day div.dim span.day {
-  color: rgba(0, 0, 0, 0.3);
+  color: #ddd;
 }
 .canelder_day div.recorded span.day {
   background-color: #ededed;
@@ -3462,4 +3531,226 @@ button {
   font-size: 1.125em;
   line-height: 1.21428em;
   opacity: 0.7;
+}
+
+.todayMeal {
+  background-color: #fff;
+}
+.todayMeal .inner {
+  padding: 0 16px;
+}
+.todayMeal .fullTab {
+  margin-top: 30px;
+}
+.todayMeal .top {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.todayMeal .top .subTit {
+  color: #717171;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.todayMeal .top .value {
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.todayMeal .mealMenu {
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #F6F7F8;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.todayMeal .mealMenu ul {
+  margin-bottom: 16px;
+}
+.todayMeal .mealMenu ul li + li {
+  margin-top: 5px;
+}
+.todayMeal .mealMenu .btn-pass {
+  background-color: #E7E9EC;
+  color: #666A6F;
+  font-size: 13px;
+  font-weight: 700;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  width: 100%;
+  border-radius: 4px;
+}
+.todayMeal h3 {
+  font-weight: 700;
+}
+.todayMeal .tabContents {
+  display: none;
+}
+.todayMeal .tabContents.ac {
+  display: block;
+}
+
+.errorMsg {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+.errorMsg p {
+  margin-top: 26px;
+  margin-bottom: 26px;
+  font-weight: 700;
+}
+.errorMsg a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.newChart {
+  text-align: center;
+  margin: 20px 0;
+}
+.newChart .item {
+  height: 194px;
+}
+.newChart .flexBx {
+  justify-content: space-between;
+  align-items: center;
+}
+.newChart h1 {
+  margin: 0;
+}
+.newChart .legend {
+  font-size: 13px;
+  color: #777;
+}
+.newChart .chart-bar {
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-top: 30px;
+  position: relative;
+  border-bottom: 0;
+  margin-bottom: 30px;
+  padding-bottom: 0;
+}
+.newChart .chart-bar .limitLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 100%;
+}
+.newChart .chart-bar .limitLine.grey {
+  border-bottom: 1px dashed #4e4e4e;
+}
+.newChart .chart-bar .limitLine.green {
+  border-bottom: 1px dashed #1ABC17;
+}
+.newChart .chart-bar .limitLine.yellow {
+  border-bottom: 1px dashed #FFB21E;
+}
+.newChart .chart-bar .date {
+  margin-top: 10px;
+}
+.newChart .limitFlex {
+  margin-bottom: 20px;
+}
+.newChart .limit {
+  color: #717171;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 13px;
+}
+.newChart .limit img {
+  width: 16px;
+  height: 16px;
+}
+.newChart h2 {
+  font-size: 18px;
+  margin-bottom: 17px;
+}
+.newChart h2 span {
+  font-weight: 700;
+}
+.newChart h2 .result-green {
+  color: var(--green);
+}
+.newChart h2 .result-red {
+  color: var(--red);
+}
+.newChart h2 .result-yellow {
+  color: var(--yellow);
+}
+.newChart .dataInfo {
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+  background-color: #F6F7F8;
+  border-radius: 8px;
+  text-align: left;
+}
+.newChart .dataInfo h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.newChart.fullColor {
+  z-index: -1;
+}
+.newChart.fullColor .item {
+  z-index: 0;
+}
+.newChart.fullColor .item.green .bar {
+  background-color: var(--green);
+}
+.newChart.fullColor .item.yellow .bar {
+  background-color: var(--yellow);
+}
+.newChart.fullColor .item.red .bar {
+  background-color: var(--red);
+}
+.newChart.fullColor .item.blue .bar {
+  background-color: #86D3FF;
+}
+.newChart.fullColor .limitBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 0;
+}
+.newChart.fullColor .limitBg > div {
+  width: 100%;
+  opacity: 0.1;
+}
+.newChart.fullColor .limitBg .red {
+  background-color: var(--red);
+}
+.newChart.fullColor .limitBg .yellow {
+  background-color: var(--yellow);
+}
+.newChart.fullColor .limitBg .green {
+  background-color: var(--green);
+}
+.newChart.fullColor .rect {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+.newChart.fullColor .rect.red {
+  background-color: var(--red);
+}
+.newChart.fullColor .rect.yellow {
+  background-color: var(--yellow);
+}
+.newChart.fullColor .rect.green {
+  background-color: var(--green);
+}
+.newChart.fullColor .rect.blue {
+  background-color: #86D3FF;
 }/*# sourceMappingURL=main.css.map */
