@@ -1726,13 +1726,21 @@ button {
         }
     }
 }
-
+.conWrap:has(.healthSummary) {
+    // background-color: #0C0D1B;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+}
 .healthSummary {
+    margin-left: -16px;
+    margin-right: -16px;
+    background-color: #0C0D1B;
+    padding: 24px 0;
+    color: #fff;
     h1 {
-        margin-bottom: 45px;
-    }
-    .userName {
-
+        margin-bottom: 38px;
+        padding: 0 25px;
     }
     .status {
         position: relative;
@@ -1745,7 +1753,7 @@ button {
             bottom: 0;
             width: 100%;
             height: 9px;
-            background-color: var(--primary);
+            background-color: #3940A0;
             z-index: -1;
         }
     }
@@ -1758,23 +1766,80 @@ button {
         vertical-align: bottom;
         margin-left: 8px;
     }
-    .flex {
+    .cardWrap {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 26px;
-        
-        .key {
+        gap: 5px;
+    }
+    .healthCard {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        flex: 1 0 0;
+        border-radius: 15px;
+        padding: 10px;
+        padding-bottom: 20px;
+        gap: 10px;
+        .circle {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid #E5E5E5;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 10px;
-            font-weight: 700;
+            img {
+                width: 24px;
+                height: 24px;
+            }
         }
-        .key {
-            font-size: 16px;
-            color: #333;
+        .name {
+            font-size: 21px;
+            font-weight: 700;
+            color: #242424;
+        }
+
+        .barWrap {
+            border-radius: 20px;
+            height: 5px;
+            background-color: #FF584E;
+            width: 100%;
+            position: relative;
+            .bar-yellow {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                background-color: #FFD850;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            .bar-green {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                background-color: #5FCE8C;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            .value-arr {
+                border-top: 5px solid #000;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-bottom: 0;
+                position: absolute;
+                top: -8px;
+                transform: translateX(-5px);
+            }
         }
         .value {
-            font-size: 15px;
+            font-size: 14px;
+            color: #777;
+            margin-top: -6px;
+        }
+        .result {
+            font-size: 14px;
             font-weight: 700;
             .green,
             .yellow,
@@ -1782,37 +1847,29 @@ button {
                 display: flex;
                 align-items: center;
                 gap: 8px;
-                &::after {
-                    content: '';
-                    display: block;
-                    width: 24px;
-                    height: 24px;
-                    background-repeat: no-repeat;
-                }
+                // &::after {
+                //     content: '';
+                //     display: block;
+                //     width: 24px;
+                //     height: 24px;
+                //     background-repeat: no-repeat;
+                // }
             }
         }
         .red {
             color: var(--red);
-            &::after {
-                background-image: url(../img/smile_red.svg);
-            }
         }
         .yellow {
             color: var(--yellow);
-            &::after {
-                background-image: url(../img/smile_yellow.svg);
-            }
         }
         .green {
             color: var(--green);
-            &::after {
-                background-image: url(../img/smile_green.svg);
-            }
         }
     }
 
     .anchorDown {
-        margin-top: 30px;
+        margin: 0 26px;
+        margin-top: 38px;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -1820,12 +1877,13 @@ button {
         justify-content: center;
         border-radius: 50px;
         height: 80px;
-        background-color: #f6f6f6;
+        background-color: rgba(255,255,255,0.07);
         &::after {
             content: '';
             width: 24px;
             height: 24px;
-            background: url(../img/arr_bottom_grey.svg) center no-repeat;
+            background: url(../img/arr_18_w.svg) center no-repeat;
+            transform: rotate(90deg);
         }
     }
 }

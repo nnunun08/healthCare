@@ -45,39 +45,72 @@
                     <button class="infoAlert" onclick="alert('frame_alert 호출')"></button>
                 </h1>
 
-                <div class="flex">
-                    <div class="key">
-                        <img src="./img/ic_glucose_24.svg" alt="glucose">
-                        혈당
+                <div class="cardWrap">
+
+                    <!-- 혈당 카드 -->
+                    <div class="healthCard">
+                        <div class="circle"><img src="./img/ic_glucose_24.svg" alt="glucose"></div>
+                        <div class="name">혈당</div>
+                        <!-- barWrap : 집중 관리 필요 범위는 백그라운드 컬러로 설정되어 있어 별도 설정이 필요 없습니다. -->
+                        <div class="barWrap">
+                            <!-- bar-yellow : 관리필요 범위를 width 로 설정해주세요 (0~100%) -->
+                            <div class="bar-yellow" style="width:80%"></div>
+                            <!-- bar-green : 정상 범위를 width 로 설정해주세요 (0~100%) -->
+                            <div class="bar-green" style="width:50%"></div>
+                            <!-- value-arr : 사용자의 수치를 left로 설정해주세요 (0~100%) -->
+                            <div class="value-arr" style="left: 90%"></div>
+                        </div>
+                        <!-- value 에 실제 수치를 범례와 함께 넣어주세요 -->
+                        <div class="value">112 mg/dl</div>
+
+                        <!-- 
+                            result의 자식 요소로 텍스트와 함께 class(red / yellow / green)를 넣어주세요 
+                            red : 집중 관리 필요
+                            yellow : 관리 필요
+                            green : 정상
+                        -->
+                        <div class="result">
+                            <div class="red">집중 관리 필요</div>
+                            <!-- <div class="yellow">관리 필요</div> -->
+                            <!-- <div class="green">정상</div> -->
+                        </div>
                     </div>
-                    <div class="value">
-                        <div class="red">집중 관리 필요</div>
-                        <!-- <div class="yellow">관리 필요</div> -->
-                        <!-- <div class="green">정상</div> -->
+
+                    <!-- 혈압 카드 -->
+                    <div class="healthCard">
+                        <div class="circle"><img src="./img/ic_blood_24.svg" alt="blood"></div>
+                        <div class="name">혈압</div>
+                        <div class="barWrap">
+                            <div class="bar-yellow" style="width:80%"></div>
+                            <div class="bar-green" style="width:50%"></div>
+                            <div class="value-arr" style="left: 72%"></div>
+                        </div>
+                        <div class="value">142/120</div>
+                        <div class="result">
+                            <!-- <div class="red">집중 관리 필요</div> -->
+                            <div class="yellow">관리 필요</div>
+                            <!-- <div class="green">정상</div> -->
+                        </div>
+                    </div>
+
+                    <!-- 지질 카드 -->
+                    <div class="healthCard">
+                        <div class="circle"><img src="./img/ic_lipid_24.svg" alt="lipid"></div>
+                        <div class="name">지질</div>
+                        <div class="barWrap">
+                            <div class="bar-yellow" style="width:80%"></div>
+                            <div class="bar-green" style="width:50%"></div>
+                            <div class="value-arr" style="left: 44%"></div>
+                        </div>
+                        <div class="value">112 mg/dl</div>
+                        <div class="result">
+                            <!-- <div class="red">집중 관리 필요</div> -->
+                            <!-- <div class="yellow">관리 필요</div> -->
+                            <div class="green">정상</div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex">
-                    <div class="key">
-                        <img src="./img/ic_blood_24.svg" alt="blood">
-                        혈압
-                    </div>
-                    <div class="value">
-                        <!-- <div class="red">집중 관리 필요</div> -->
-                        <div class="yellow">관리 필요</div>
-                        <!-- <div class="green">정상</div> -->
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="key">
-                        <img src="./img/ic_lipid_24.svg" alt="lipid">
-                        지질
-                    </div>
-                    <div class="value">
-                        <!-- <div class="red">집중 관리 필요</div> -->
-                        <!-- <div class="yellow">관리 필요</div> -->
-                        <div class="green">정상</div>
-                    </div>
-                </div>
+                
 
                 <a href="#tab01" class="anchorDown">혈당 상태로 바로가기</a>
             </div>

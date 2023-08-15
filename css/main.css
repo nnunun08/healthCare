@@ -1700,8 +1700,22 @@ button {
   color: var(--primary);
 }
 
+.conWrap:has(.healthSummary) {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.healthSummary {
+  margin-left: -16px;
+  margin-right: -16px;
+  background-color: #0C0D1B;
+  padding: 24px 0;
+  color: #fff;
+}
 .healthSummary h1 {
-  margin-bottom: 45px;
+  margin-bottom: 38px;
+  padding: 0 25px;
 }
 .healthSummary .status {
   position: relative;
@@ -1715,7 +1729,7 @@ button {
   bottom: 0;
   width: 100%;
   height: 9px;
-  background-color: var(--primary);
+  background-color: #3940A0;
   z-index: -1;
 }
 .healthSummary .infoAlert {
@@ -1727,61 +1741,101 @@ button {
   vertical-align: bottom;
   margin-left: 8px;
 }
-.healthSummary .flex {
+.healthSummary .cardWrap {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 26px;
+  gap: 5px;
 }
-.healthSummary .flex .key {
+.healthSummary .healthCard {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  flex: 1 0 0;
+  border-radius: 15px;
+  padding: 10px;
+  padding-bottom: 20px;
   gap: 10px;
+}
+.healthSummary .healthCard .circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #E5E5E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.healthSummary .healthCard .circle img {
+  width: 24px;
+  height: 24px;
+}
+.healthSummary .healthCard .name {
+  font-size: 21px;
+  font-weight: 700;
+  color: #242424;
+}
+.healthSummary .healthCard .barWrap {
+  border-radius: 20px;
+  height: 5px;
+  background-color: #FF584E;
+  width: 100%;
+  position: relative;
+}
+.healthSummary .healthCard .barWrap .bar-yellow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #FFD850;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.healthSummary .healthCard .barWrap .bar-green {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #5FCE8C;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.healthSummary .healthCard .barWrap .value-arr {
+  border-top: 5px solid #000;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 0;
+  position: absolute;
+  top: -8px;
+  transform: translateX(-5px);
+}
+.healthSummary .healthCard .value {
+  font-size: 14px;
+  color: #777;
+  margin-top: -6px;
+}
+.healthSummary .healthCard .result {
+  font-size: 14px;
   font-weight: 700;
 }
-.healthSummary .flex .key {
-  font-size: 16px;
-  color: #333;
-}
-.healthSummary .flex .value {
-  font-size: 15px;
-  font-weight: 700;
-}
-.healthSummary .flex .value .green,
-.healthSummary .flex .value .yellow,
-.healthSummary .flex .value .red {
+.healthSummary .healthCard .result .green,
+.healthSummary .healthCard .result .yellow,
+.healthSummary .healthCard .result .red {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.healthSummary .flex .value .green::after,
-.healthSummary .flex .value .yellow::after,
-.healthSummary .flex .value .red::after {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-repeat: no-repeat;
-}
-.healthSummary .flex .red {
+.healthSummary .healthCard .red {
   color: var(--red);
 }
-.healthSummary .flex .red::after {
-  background-image: url(../img/smile_red.svg);
-}
-.healthSummary .flex .yellow {
+.healthSummary .healthCard .yellow {
   color: var(--yellow);
 }
-.healthSummary .flex .yellow::after {
-  background-image: url(../img/smile_yellow.svg);
-}
-.healthSummary .flex .green {
+.healthSummary .healthCard .green {
   color: var(--green);
 }
-.healthSummary .flex .green::after {
-  background-image: url(../img/smile_green.svg);
-}
 .healthSummary .anchorDown {
-  margin-top: 30px;
+  margin: 0 26px;
+  margin-top: 38px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1789,13 +1843,14 @@ button {
   justify-content: center;
   border-radius: 50px;
   height: 80px;
-  background-color: #f6f6f6;
+  background-color: rgba(255, 255, 255, 0.07);
 }
 .healthSummary .anchorDown::after {
   content: "";
   width: 24px;
   height: 24px;
-  background: url(../img/arr_bottom_grey.svg) center no-repeat;
+  background: url(../img/arr_18_w.svg) center no-repeat;
+  transform: rotate(90deg);
 }
 
 .greyCard {
