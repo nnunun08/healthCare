@@ -639,6 +639,29 @@ button {
     button.btn-mainArr::after {
         display: none;
     }
+    &.blackBtn {
+        .btn-mainArr {
+            border-radius: 8px;
+            background: #1F1F1F;
+            color: #fff;
+            color: #FFF;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 140%; /* 23.8px */
+        }
+    }
+    &.greyBtn {
+        .btn-mainArr {
+            background: #EAEEF1;
+            color : #CBCDD4;
+        }
+    }
+    &.disabled {
+        .btn-mainArr {
+            background-color: transparent !important;
+            color: #CBCDD4 !important;
+        }
+    }
 }
 
 
@@ -1014,6 +1037,10 @@ button {
     }
     .back {
         background-image: url(../img/nav_top_back.svg);
+    }
+    .close.right {
+        left: unset;
+        right: 16px;
     }
 }
 
@@ -3709,4 +3736,263 @@ button {
             &.blue {background-color: #86D3FF;}
         }
     }
+}
+
+.frame_select {
+    Select {
+        font-family: inherit;  /* 폰트 상속 */
+        background: url(../img/ic_selArr.svg) no-repeat 92% 50%;
+         /* 네이티브 화살표를 커스텀 화살표로 대체 */
+        -webkit-appearance: none; 
+        /* 네이티브 외형 감추기 */
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 4px;
+        border: 1px solid var(#9296A4);
+        padding: 10px;
+        padding-right: 20px;
+        height: 39px;
+    }
+    Select::-ms-expand {
+            display: none;/* 화살표 없애기 for IE10, 11*/
+    }
+}
+
+.couponWrap {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.moreBtn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 50px;
+    border-radius: 40px;
+    border: 1px solid var(--newGrey3, #9296A4);
+    width: auto;
+    margin: 0 auto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #000;
+}
+.frame_coupon {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 20px 20px 24px;
+    position: relative;
+    .tit {
+        font-size: 18px;
+        line-height: 120%;
+        font-weight: 500;
+        letter-spacing: -0.18px;
+        strong {
+            font-weight: 800;
+        }
+    }
+    .expiration {
+        margin-top: 3px;
+        color: rgba(255, 255, 255, 0.70);
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: -0.13px;
+    }
+    .badge {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.14px;
+        color: #fff;
+    }
+    
+    &.disabled {
+        opacity: 0.3;
+    }
+    &.health {
+        background: var(--gra, linear-gradient(180deg, #FF6B63 -7.99%, #FF50A4 117.83%));
+        color: #fff;
+        width: 100%;
+        height: auto;
+    }
+    &.coffee {
+        background: #F2F3F4;
+        .tit {
+            color: #000;
+        }
+        .expiration {
+            color: #AAA;
+        }
+        .coupImg {
+            position: absolute;
+            top: 14px;
+            right: 20px;
+            .state {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: auto;
+                color: #fff;
+                padding: 4px 6px;
+                background: #000;
+                white-space: nowrap;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: -0.12px;
+            }
+        }
+        &.disabled  {
+            .coupImg .state {
+                display: block;
+            }
+        }
+    }
+}
+
+
+.couponCard {
+    position: relative;
+    padding: 24px;
+    margin-bottom: 11px;
+    text-align: center;
+    &.health {
+        background: var(--gra, linear-gradient(180deg, #FF6B63 -7.99%, #FF50A4 117.83%));
+        color: #fff;
+    }
+    &.coffee {
+        background: #E0E6EC;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: left;
+        margin-bottom: 34px;
+        .desc {
+            color: #000;
+            text-align: left;
+        }
+        .coffeeImg {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .tit {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.16px;
+    }
+    .desc {
+        margin-top: 4px;
+        color: #FFF;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.24px;
+    }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        border-radius: 50%;
+        top: 50%;
+        left: -8px;
+        transform: translateY(-50%);
+    }
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        border-radius: 50%;
+        top: 50%;
+        right: -8px;
+        transform: translateY(-50%);
+    }
+}
+
+.couponID {
+    border-radius: 8px;
+    background: var(--newGrey, #EAEEF1);
+    padding: 10px;
+    width: 100%;
+    color: #9296A4;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+em {
+    display: block;
+    text-align: center;
+    color: var(--newGrey3, #9296A4);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.14px;
+    margin-bottom: 34px;
+}
+
+.date {
+    color: var(--newDarkGrey, #3F4148);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.14px;
+    margin-bottom: 5px;
+}
+.guide {
+    margin-top: 24px;
+    .tit {
+        color: var(--newGrey3, #9296A4);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: -0.14px;
+        margin-bottom: 23px;
+    }
+    ul {
+        li {
+            position: relative;
+            color: var(--newGrey3, #9296A4);
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.14px;
+            padding-left: 21px;
+            margin-bottom: 16px;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: var(--newGrey3, #9296A4);
+            }
+        }
+    }
+}
+
+.mainBtn {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 58px;
+    padding: 0px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #1F1F1F;
 }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌레터생활건강</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap" style="background: #fff;">
+        <!-- component : frame_topNavSub -->
+        <div class="frame_topNavSub">
+            <button class="back"></button>
+            <div class="tit">선물함</div>
+        </div>
+
+        
+        <!-- component : frame_coupon -->
+        <div class="couponWrap">
+
+            <div class="frame_select">
+                <select name="" id="">
+                    <option value="사용 가능">사용 가능</option>
+                    <option value="사용/신청 완료">사용/신청 완료</option>
+                    <option value="기간 만료">기간 만료</option>
+                </select>
+            </div>
+
+            <a href="#" class="frame_coupon health">
+                <div class="badge"></div>
+                <div class="tit">
+                    <div>헬스케어 1개월</div>
+                    <strong>무료 사용권</strong>
+                </div>
+                <div class="expiration">유효기간 2024.01.01</div>
+            </a>
+            <a class="frame_coupon health disabled">
+                <div class="badge">사용완료</div>
+                <div class="tit">
+                    <div>헬스케어 1개월</div>
+                    <strong>무료 사용권</strong>
+                </div>
+                <div class="expiration">유효기간 2024.01.01</div>
+            </a>
+            <a class="frame_coupon health disabled">
+                <div class="badge">기간만료</div>
+                <div class="tit">
+                    <div>헬스케어 1개월</div>
+                    <strong>무료 사용권</strong>
+                </div>
+                <div class="expiration">유효기간 2024.01.01</div>
+            </a>
+
+            <a href="#" class="frame_coupon coffee">
+                <div class="coupImg">
+                    <img src="./img/ic_coffee.svg" alt="...">
+                    <div class="state"></div>
+                </div>
+                <div class="tit">
+                    <div>아메리카노</div>
+                    <strong>무료 쿠폰</strong>
+                </div>
+                <div class="expiration">유효기간 2024.01.01</div>
+            </a>
+            <a class="frame_coupon coffee disabled">
+                <div class="coupImg">
+                    <img src="./img/ic_coffee.svg" alt="...">
+                    <div class="state">사용완료</div>
+                </div>
+                <div class="tit">
+                    <div>아메리카노</div>
+                    <strong>무료 쿠폰</strong>
+                </div>
+                <div class="expiration">유효기간 2024.01.01</div>
+            </a>
+            <a class="frame_coupon coffee disabled">
+                <div class="coupImg">
+                    <img src="./img/ic_coffee.svg" alt="...">
+                    <div class="state">기간만료</div>
+                </div>
+                <div class="tit">
+                    <div>아메리카노</div>
+                    <strong>무료 쿠폰</strong>
+                </div>
+                <div class="expiration">유효기간 2024.01.01</div>
+            </a>
+
+            <a href="#" class="moreBtn">더보기</a>
+        </div>
+
+
+
+    </div>
+
+
+
+    
+
+    <!-- 배너 슬라이드 : slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.storeItemWrap').slick({
+            dots: true,
+            speed: 500,
+            infinite: true,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          });
+        });
+    </script>
+    
+</body>
+</html>
