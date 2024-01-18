@@ -4102,6 +4102,7 @@ em {
   color: #999;
   border-bottom: 0.5px solid #DDD;
   padding: 0 18px;
+  background-color: #fff;
 }
 .frame_tabMenu ul {
   display: flex;
@@ -4115,6 +4116,8 @@ em {
 }
 
 .frame_tabMenu_b {
+  margin: 0 auto;
+  max-width: 600px;
   height: 48px;
   display: flex;
   align-items: center;
@@ -4125,64 +4128,91 @@ em {
   font-weight: normal;
   position: fixed;
   left: 0;
+  right: 0;
   bottom: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
+  color: #fff;
+}
+.frame_tabMenu_b:active, .frame_tabMenu_b:hover {
+  background-color: #222;
+}
+.frame_tabMenu_b[disabled] {
+  background-color: #D7D8D9;
+  color: #fff;
 }
 
 .frame_tabMenu_w {
+  margin: 0 auto;
+  max-width: 600px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
   left: 0;
+  right: 0;
   bottom: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
+  background-color: #EFF0F2;
+  color: #333;
+}
+.frame_tabMenu_w:active, .frame_tabMenu_w:hover {
+  background-color: #D7D8D9;
+}
+.frame_tabMenu_w[disabled] {
+  background-color: #EFF0F2;
+  color: #bbb;
 }
 
-.frame_passPopup .ev-modal {
+.frame_passConfirm .ev-modal {
   padding: 38px;
 }
-.frame_passPopup .ev-modal .dim {
+.frame_passConfirm .ev-modal .dim {
   background: rgba(0, 0, 0, 0.4);
 }
-.frame_passPopup .ev-modal .card {
+.frame_passConfirm .ev-modal .card {
   border-radius: 6px;
   background-color: #fff;
   padding-left: 18px;
-  padding-left: 18px;
+  padding-right: 18px;
   padding-top: 30px;
   padding-bottom: 0;
   gap: 36px;
+  text-align: center;
 }
-.frame_passPopup .ev-modal .card .btnWrap {
+.frame_passConfirm .ev-modal .card .btnWrap {
   border-top: 0.5px solid #e7e7e7;
 }
-.frame_passPopup .ev-modal .card .tit {
-  text-align: center;
-  font-size: 16px;
-  font-weight: normal;
+.frame_passConfirm .ev-modal .card .tit {
+  font-size: 18px;
+  font-weight: bold;
   color: #000;
 }
-.frame_passPopup .ev-modal .card .tit + .desc {
+.frame_passConfirm .ev-modal .card .subTit {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.frame_passConfirm .ev-modal .card .subTit + .desc {
   margin-top: 12px;
 }
-.frame_passPopup .ev-modal .card .desc {
-  text-align: center;
+.frame_passConfirm .ev-modal .card .desc {
   font-size: 14px;
   line-height: 22px;
   color: #555;
 }
-.frame_passPopup .ev-modal .card .btnWrap {
+.frame_passConfirm .ev-modal .card .btnWrap {
   margin-left: -18px;
   margin-right: -18px;
   box-sizing: border-box;
   width: calc(100% + 32px);
   gap: 0;
 }
-.frame_passPopup .ev-modal .card .btnWrap .btn {
+.frame_passConfirm .ev-modal .card .btnWrap .btn {
   height: 60px;
   font-size: 18px;
   font-weight: bold;
@@ -4194,12 +4224,75 @@ em {
   font-weight: 700;
   border-radius: 4px;
 }
-.frame_passPopup .ev-modal .card .btnWrap .btn.btn-true {
+.frame_passConfirm .ev-modal .card .btnWrap .btn.btn-true {
   color: #ff3A4A;
   background-color: transparent;
 }
-.frame_passPopup .ev-modal .card .btnWrap .btn.btn-false {
+.frame_passConfirm .ev-modal .card .btnWrap .btn.btn-false {
   color: #000;
   background-color: transparent;
   font-weight: normal;
+}
+
+.errorMsg.errorMsgPass {
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  background-color: #fff;
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.errorMsg.errorMsgPass img {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 20px;
+}
+.errorMsg.errorMsgPass .tit {
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 9px;
+}
+.errorMsg.errorMsgPass p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #999;
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-weight: normal;
+}
+.errorMsg.errorMsgPass a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  font-size: 12px;
+  color: #000;
+  font-weight: normal;
+  min-width: 93px;
+  width: auto;
+  background-color: #F5F5F5;
+  border-radius: 40px;
+  gap: 4px;
+}
+.errorMsg.errorMsgPass a i {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+.errorMsg.errorMsgPass a i img {
+  width: 14px;
+  height: 14px;
 }/*# sourceMappingURL=main.css.map */

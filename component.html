@@ -18,11 +18,40 @@
         <!-- component : Tab menu -->
         <div data-include-path="./component/frame_tabMenu.html"></div>
 
-        <!-- component : passBtn_b -->
-        <div data-include-path="./component/frame_passBtn_b.html"></div>
+        <!-- component : frame_passBtn_b -->
+        <!-- <div data-include-path="./component/frame_passBtn_b.html"></div> -->
+        <div class="frame_tabMenu_b" style="position: static;">다음</div>        
+        <div class="frame_tabMenu_b" style="position: static;" disabled>다음</div>        
 
-        <!-- component : passBtn_w -->
-        <div data-include-path="./component/frame_passBtn_w.html"></div>
+        <!-- component : frame_passBtn_w -->
+        <!-- <div data-include-path="./component/frame_passBtn_w.html"></div> -->
+        <div class="frame_tabMenu_w" style="position: static;">취소</div>        
+        <div class="frame_tabMenu_w" style="position: static;" disabled>취소</div>        
+
+        <!-- component : frame_passConfirm -->
+        <div class="frame_confirm frame_passConfirm">
+            <!-- 모달 활성화시 ev-modal 에 .ac 추가 -->
+            <div class="ev-modal ac" style="position:relative; width:100%; height:844px; margin: 20px auto;">
+                <div class="dim"></div>
+                <div class="card">
+                    <div>
+                        <div class="tit">
+                            [서비스명]
+                        </div>
+                        <div class="subTit">
+                            서비스 이용을 해지하시겠습니까?
+                        </div>
+                        <div class="desc">
+                            고객님께서 PASS 서비스를 1년동안 이용하지 않으시면 휴면계정으로 전환되고, PASS서비스를 다시 이용하고자 하실 경우 휴면계정 해제를 위한 재인증이 필요합니다.
+                        </div>
+                    </div>
+                    <div class="btnWrap">
+                        <button class="btn btn-false">취소</button>
+                        <button class="btn btn-true">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <!-- component : topNav -->
@@ -53,7 +82,7 @@
         <!-- <div data-include-path="./component/frame_alert.html"></div> -->
         <div class="frame_alert">
             <!-- 모달 활성화시 ev-modal 에 .ac 추가 -->
-            <div class="ev-modal ac" style="position:relative; width:390px; height:844px; margin: 20px auto;">
+            <div class="ev-modal ac" style="position:relative; width:100%; height:844px; margin: 20px auto;">
                 <div class="dim"></div>
                 <div class="card">
                     <div>
@@ -78,7 +107,7 @@
         <!-- <div data-include-path="./component/frame_alert.html"></div> -->
         <div class="frame_alert">
             <!-- 모달 활성화시 ev-modal 에 .ac 추가 -->
-            <div class="ev-modal ac" style="position:relative; width:390px; height:844px; margin: 20px auto;">
+            <div class="ev-modal ac" style="position:relative; width:100%; height:844px; margin: 20px auto;">
                 <div class="dim"></div>
                 <div class="card">
                     <div>
@@ -102,7 +131,7 @@
         <!-- <div data-include-path="./component/frame_confirm.html"></div> -->
         <div class="frame_confirm">
             <!-- 모달 활성화시 ev-modal 에 .ac 추가 -->
-            <div class="ev-modal ac" style="position:relative; width:390px; height:844px; margin: 20px auto;">
+            <div class="ev-modal ac" style="position:relative; width:100%; height:844px; margin: 20px auto;">
                 <div class="dim"></div>
                 <div class="card">
                     <div>
@@ -127,7 +156,7 @@
         <!-- <div data-include-path="./component/frame_form.html"></div> -->
 
         <div class="frame_form">
-            <div class="ev-modal ac" style="position:relative; width:390px; height:844px; margin: 20px auto;">
+            <div class="ev-modal ac" style="position:relative; width:100%; height:844px; margin: 20px auto;">
                 <div class="dim"></div>
                 <form class="card">
                     <div>
