@@ -11,8 +11,9 @@
 }
 
 body {
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
+  line-height: 1.5;
   letter-spacing: -0.015em;
   background: #F6F7F8;
 }
@@ -4092,4 +4093,113 @@ em {
   flex-shrink: 0;
   border-radius: 8px;
   background: #1F1F1F;
+}
+
+.frame_tabMenu {
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #999;
+  border-bottom: 0.5px solid #DDD;
+  padding: 0 18px;
+}
+.frame_tabMenu ul {
+  display: flex;
+  gap: 18px;
+}
+.frame_tabMenu ul li.ac {
+  border-bottom: 2px solid #000;
+}
+.frame_tabMenu .ac {
+  color: #000;
+}
+
+.frame_tabMenu_b {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background-color: #333;
+  font-size: 16px;
+  font-weight: normal;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.frame_tabMenu_w {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.frame_passPopup .ev-modal {
+  padding: 38px;
+}
+.frame_passPopup .ev-modal .dim {
+  background: rgba(0, 0, 0, 0.4);
+}
+.frame_passPopup .ev-modal .card {
+  border-radius: 6px;
+  background-color: #fff;
+  padding-left: 18px;
+  padding-left: 18px;
+  padding-top: 30px;
+  padding-bottom: 0;
+  gap: 36px;
+}
+.frame_passPopup .ev-modal .card .btnWrap {
+  border-top: 0.5px solid #e7e7e7;
+}
+.frame_passPopup .ev-modal .card .tit {
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.frame_passPopup .ev-modal .card .tit + .desc {
+  margin-top: 12px;
+}
+.frame_passPopup .ev-modal .card .desc {
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+  color: #555;
+}
+.frame_passPopup .ev-modal .card .btnWrap {
+  margin-left: -18px;
+  margin-right: -18px;
+  box-sizing: border-box;
+  width: calc(100% + 32px);
+  gap: 0;
+}
+.frame_passPopup .ev-modal .card .btnWrap .btn {
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  border-radius: 4px;
+}
+.frame_passPopup .ev-modal .card .btnWrap .btn.btn-true {
+  color: #ff3A4A;
+  background-color: transparent;
+}
+.frame_passPopup .ev-modal .card .btnWrap .btn.btn-false {
+  color: #000;
+  background-color: transparent;
+  font-weight: normal;
 }/*# sourceMappingURL=main.css.map */

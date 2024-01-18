@@ -1,0 +1,69 @@
+.banner_ladder {
+  position: relative;
+  aspect-ratio: 390/700;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner_ladder .backImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.banner_ladder .ladderBtn {
+  width: 100%;
+  z-index: 1;
+  animation: ladderBtn 1s infinite;
+}
+.banner_ladder .btn-mainArr::after {
+  display: none;
+}
+.banner_ladder .modal .dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+.banner_ladder .modal .dim .alertMsg {
+  text-align: center;
+  max-width: 580px;
+  box-sizing: border-box;
+  width: calc(100% - 20px);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 40px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.banner_ladder .modal .dim .alertMsg p {
+  margin: 0;
+  color: #9296A4;
+  font-size: 16px;
+  line-height: 140%;
+}
+.banner_ladder .modal .dim .alertMsg p b {
+  color: #3F4148;
+}
+@keyframes ladderBtn {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.03);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.015);
+  }
+}/*# sourceMappingURL=banner_ladder.css.map */
