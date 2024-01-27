@@ -4,7 +4,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 .banner_ladder .backImg {
   position: absolute;
@@ -13,9 +13,11 @@
   width: 100%;
 }
 .banner_ladder .ladderBtn {
-  width: 100%;
+  width: 77%;
   z-index: 1;
   animation: ladderBtn 1s infinite;
+  margin-bottom: 140px;
+  margin-bottom: 36%;
 }
 .banner_ladder .btn-mainArr::after {
   display: none;

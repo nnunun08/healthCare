@@ -14,7 +14,13 @@
         <div class="banner_ladder">
             <img class="backImg" src="./img/event/banner_ladderBG.png" alt="bg">
             <img class="ladderBtn" src="./img/event/btn_ladderStart.png" alt="btn" onclick="ladderStart()">
-            <img id="ladderGif" class="backImg" src="./img/event/banner_ladderAction.gif" alt="action" style="display: none;">
+
+                <img class="backImg ladderAction" src="./img/event/banner_ladderAction1.gif" alt="action" style="display: none;">
+                <img class="backImg ladderAction" src="./img/event/banner_ladderAction2.gif" alt="action" style="display: none;">
+                <img class="backImg ladderAction" src="./img/event/banner_ladderAction3.gif" alt="action" style="display: none;">
+                <img class="backImg ladderAction" src="./img/event/banner_ladderAction4.gif" alt="action" style="display: none;">
+                <img class="backImg ladderAction" src="./img/event/banner_ladderAction5.gif" alt="action" style="display: none;">
+
             <div class="modal" style="display: none;">
                 <div class="dim">
                     <div class="alertMsg">
@@ -35,7 +41,11 @@
             </div>
             <script>
                 function ladderStart() {
-                    document.getElementById('ladderGif').style.display = 'block'
+                    let a = Math.floor(Math.random() * (5 - 1 + 1));
+                    console.log(a)
+                    const ladderAction = document.querySelectorAll('.ladderAction')
+                    console.log(ladderAction)
+                    ladderAction[a].style.display = 'block'
                     document.querySelector('.ladderBtn').style.display = 'none'
                     setTimeout(() => {
                         document.querySelector('body').style.overflow = 'hidden'
