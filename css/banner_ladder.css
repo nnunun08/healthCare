@@ -13,11 +13,10 @@
   width: 100%;
 }
 .banner_ladder .ladderBtn {
-  width: 77%;
+  width: 87%;
   z-index: 1;
   animation: ladderBtn 1s infinite;
-  margin-bottom: 140px;
-  margin-bottom: 36%;
+  margin-bottom: 7%;
 }
 .banner_ladder .btn-mainArr::after {
   display: none;
