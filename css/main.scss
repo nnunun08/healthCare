@@ -36,6 +36,7 @@ a {
 
 button {
     cursor: pointer;
+    font-family: inherit;
 }
 
 .btn-round {
@@ -1731,7 +1732,7 @@ button {
         &::after {
             content: '';
             position: absolute;
-            right: 8px;
+            right: 0px;
             top: 50%;
             transform: translateY(-50%);
             background: url(../img/arr_24_g.svg) center/cover no-repeat;
@@ -1741,12 +1742,66 @@ button {
     }
     &.whiteVer {
         margin: 0;
+        border-top: 1px solid #F2F5F9;
+        border-bottom: 1px solid #F2F5F9;
+        & + .whiteVer {
+            border-top: 0;
+        }
         a {
+            height: 56px;
+            box-sizing: border-box;
             border-radius: 0;
             background-color: #fff;
             padding: 16px;
             font-size: 14px;
         }
+    }
+    
+    .toggle {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        input {
+            display: none;
+        }
+        .toggleUI {
+            width: 40px;
+            height: 22px;
+            border-radius: 100px;
+            background-color: #D6D7DB;
+            display: flex;
+            align-items: center;
+            padding-left: 2px;
+            padding-right: 2px;
+            transition: 0.2s;
+            .circle {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+                transition: 0.2s;
+            }
+        }
+        input:checked + .toggleUI {
+            background-color: #2E9BFF;
+            .circle {
+                margin-left: 22px;
+            }
+        }
+    }
+
+    .greySmall {
+        flex: 1 0 0;
+        text-align: right;
+        font-size: 14px;
+        color: #AEAEAE;
+        margin-right: -8px;
+    }
+
+    .noArr::after {
+        display: none;
     }
 }
 
@@ -4140,6 +4195,48 @@ em {
                 line-height: 22px;
                 color: #555;
             }
+
+            .conBx {
+                margin-left: -18px;
+                margin-right: -18px;
+                padding-left: 18px;
+                padding-right: 18px;
+                padding-top: 14px;
+                padding-bottom: 14px;
+                max-height: 340px;
+                box-sizing: border-box;
+                overflow: auto;
+                text-align: left;
+                margin-top: 14px;
+                color: var(--grey2);
+                font-size: 14px;
+                .view {
+                    cursor: pointer;
+                }
+            }
+            .dontSee {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 12px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #9C9C9C;
+                gap: 12px;
+                margin-bottom: -35px;
+                input {
+                    display: none;
+                }
+                .checkBx {
+                    width: 24px;
+                    height: 24px;
+                    background: url(../img/ic_dontSee_df.svg) center no-repeat;
+                }
+                input:checked + .checkBx {
+                    background: url(../img/ic_dontSee_ac.svg) center no-repeat;
+                }
+            }
+
             .btnWrap {
                 margin-left: - $sidePadding;
                 margin-right: - $sidePadding;
